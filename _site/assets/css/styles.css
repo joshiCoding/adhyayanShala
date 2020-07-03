@@ -2,11 +2,11 @@
 
 body { background: #ddd; }
 
-header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 60px; position: fixed; top: 0; left: 0; z-index: 30; background: rgba(255, 255, 255, 0.5); }
+header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 100px; position: fixed; top: 0; left: 0; z-index: 30; background: rgba(255, 255, 255, 0.5); }
 
-.hero { height: 90vh; }
+.hero { height: 80vh; }
 
-.collection, .get-in-touch, .articles, .about-us, .follow-us, .foot { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+.collection, .get-in-touch, .articles, .about-us, .follow-us, .foot { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin-top: 60px; margin-bottom: 60px; }
 
 .about-us { background: #c1c1c1; border-radius: 67px 0px; }
 
@@ -23,20 +23,20 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 .fixed-wapp { border-radius: 10px; width: 50px; height: 50px; position: fixed; bottom: 30px; right: 30px; z-index: 50; overflow: hidden; }
 .fixed-wapp img { width: 240%; position: absolute; top: -50%; left: -70%; }
 
-header .main-nav-open { border: 0; background: none; transform: rotate(90deg); width: 50px; height: 50px; }
+header .main-nav-open { border: 0; background: none; transform: rotate(90deg); width: 80px; height: 80px; font-size: 2rem; }
 header .main-nav .nav-container { position: absolute; z-index: 20; background: #ccc; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: flex-start; padding-top: 60px; display: none; }
 header .main-nav .nav-container-close { border: 0; background: none; position: absolute; top: 20px; right: 20px; }
 header .main-nav .nav-container li { list-style: none; text-align: left; padding: 20px; font-size: 1.5rem; }
 header .main-nav .nav-container a { text-decoration: none; }
 header .logo { font-weight: bolder; font-size: 2rem; }
-header .call-now { border: 0; background: none; width: 50px; height: 50px; }
+header .call-now { border: 0; background: none; width: 80px; height: 80px; }
 
-.hero { position: relative; overflow: hidden; background: url("http://localhost:4000/assets/images/bookshelf.jpg"); background-size: cover; }
+.hero { position: relative; overflow: hidden; background: url("http://localhost:4000/adhyayanshala/assets/images/bookshelf.jpg"); background-size: cover; }
 .hero .hero-content { background: linear-gradient(90.16deg, #040404 5.36%, rgba(255, 255, 255, 0) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3)); color: #ddd; padding: 20px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
 .hero .hero-content h1 { padding: 5px 0; font-size: 1.5rem; }
 .hero .hero-content h2 { font-size: 1.2rem; padding: 30px 0 10px; }
 .hero .hero-content button { border: none; border-radius: 10px; height: 50px; width: 200px; background: #ddd; font-size: 1.5rem; font-weight: bolder; }
-.hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); }
+.hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); display: flex; justify-content: center; padding-top: 5px; }
 
 .get-in-touch { background: #ccc; text-align: left; align-items: flex-start; }
 .get-in-touch h1 { text-align: left; width: 100%; }
@@ -51,4 +51,5 @@ header .call-now { border: 0; background: none; width: 50px; height: 50px; }
 
 .about-us p { padding: 20px; }
 
-.follow-us .circles { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; }
+.follow-us .circles { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }
+.follow-us .circles .circle { display: flex; justify-content: center; align-items: center; }
