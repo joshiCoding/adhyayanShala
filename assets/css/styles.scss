@@ -176,7 +176,7 @@ header{
     overflow:hidden;
    
    
-    background:url("/assets/images/bookshelf.jpg");
+    background:url('{{ "/assets/images/bookshelf.jpg" | absolute_url }}');
     background-size:cover;
    
     .hero-content{
