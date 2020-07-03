@@ -15,16 +15,22 @@ body{
 }
 // for header
 header{
-    border:3px solid red;
     display:flex;
     justify-content: space-between;
     align-items:center;
     text-align:center;
+    width:100vw;
+    height:60px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:30;
+    background:rgba(255,255,255,0.5);
 }
 
 //content
 .hero{
-    height:80vh;
+    height:90vh;
 }
 .collection,
 .get-in-touch,
@@ -47,22 +53,31 @@ header{
 
 // ---------components--------
 .box{
-    border:2px solid red;
+    border:2px solid #a1a1a1;
     border-radius:10px;
     width:90%;
+    max-width:500px;
     height:auto;
     margin:20px;
-    // overflow:hidden;
+    overflow:hidden;
     .box-img{
-        border:2px solid red;
+  
         width:100%;
         height:250px;
+        img{
+            width:100%;
+        }
     }
     .box-content{
-        padding:20px 20px 70px;
+        padding:20px 30px 50px;
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+
+        background:#a1a1a1;
         position:relative;
         p{
             padding:10px;
+            font-size:0.9rem;
         }
         .box-author{
             position:absolute;
@@ -77,12 +92,93 @@ header{
         }
     }
 }
+.circle{
+    border:2px solid #aaa;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
 
+.fixed-wapp{
+    border-radius:10px;
+    width:50px;
+    height:50px;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    z-index:50;
+    overflow:hidden;
+    img{
+        width:240%;
+        position:absolute;
+        top:-50%;
+        left:-70%
+    }
+}
 // ------Design------
+
+//header
+header{
+  
+    .main-nav{
+        &-open{
+            border:0;
+            background:none;
+            transform:rotate(90deg);
+            width:50px;
+            height:50px;
+       }
+       .nav-container{
+           position:absolute;
+           z-index:20;
+           background:#ccc;
+           top:0;
+           left:0;
+           width:100%;
+           height:100%;
+           display:flex;
+           flex-direction:column;
+           align-items:flex-start;
+           padding-top:60px;
+           &-close{
+               border:0;
+               background:none;
+               position:absolute;
+               top:20px;
+               right:20px;
+           }
+           li{
+               list-style:none;
+               text-align:left;
+               padding:20px ;
+               font-size:1.5rem;
+           }
+           a{
+               text-decoration:none;
+           }
+           display:none;
+       }
+    }
+    .logo{
+        font-weight:bolder;
+        font-size:2rem;
+    }
+    .call-now{
+        border:0;
+        background:none;
+        width:50px;
+        height:50px;
+    }
+}
 //hero
 .hero{
     position:relative;
     overflow:hidden;
+   
+   
+    background:url("/assets/images/bookshelf.jpg");
+    background-size:cover;
+   
     .hero-content{
         background: linear-gradient(90.16deg, #040404 5.36%, rgba(255, 255, 255, 0) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3));
         color:#ddd;
@@ -117,15 +213,16 @@ header{
         width:50px;
         height:50px;
         border-radius:50%;
+        transform:translateX(-50%);
     }
 }
 // get in touch
 .get-in-touch{
-    border:2px solid red;
+    background:#ccc;
     text-align:left;
     align-items:flex-start;
     h1{
-        text-align:center;
+        text-align:left;
         width:100%;
     }
     &-call{
@@ -135,5 +232,48 @@ header{
         p{
             padding:5px;
         }
+    }
+    #or{
+        padding:10px;
+        display:none;
+    }
+    .get-in-touch-form{
+        display:none;
+    }
+
+}
+.articles{
+    
+    button{
+        border:0;
+        background:none;
+    }
+    .article{
+        justify-self:flex-start;
+        text-align:left;
+        margin:20px 0;
+        p{
+            padding:10px 0;
+        }
+
+    }
+}
+//about us
+.about-us{
+    p{
+        padding:20px;
+    }
+}
+
+//----------------Footer-----------
+//follow
+.follow-us{
+    .circles{
+        display:flex;
+        flex-direction:row;
+        width:100%;
+        justify-content:space-between;
+        padding:20px;
+        
     }
 }
