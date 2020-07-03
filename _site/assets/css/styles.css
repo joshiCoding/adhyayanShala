@@ -1,0 +1,54 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { background: #ddd; }
+
+header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 60px; position: fixed; top: 0; left: 0; z-index: 30; background: rgba(255, 255, 255, 0.5); }
+
+.hero { height: 90vh; }
+
+.collection, .get-in-touch, .articles, .about-us, .follow-us, .foot { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+
+.about-us { background: #c1c1c1; border-radius: 67px 0px; }
+
+.box { border: 2px solid #a1a1a1; border-radius: 10px; width: 90%; max-width: 500px; height: auto; margin: 20px; overflow: hidden; }
+.box .box-img { width: 100%; height: 250px; }
+.box .box-img img { width: 100%; }
+.box .box-content { padding: 20px 30px 50px; border-top-left-radius: 10px; border-top-right-radius: 10px; background: #a1a1a1; position: relative; }
+.box .box-content p { padding: 10px; font-size: 0.9rem; }
+.box .box-content .box-author { position: absolute; bottom: 10%; left: 5%; }
+.box .box-content .box-price { position: absolute; bottom: 10%; right: 5%; }
+
+.circle { border: 2px solid #aaa; width: 50px; height: 50px; border-radius: 50%; }
+
+.fixed-wapp { border-radius: 10px; width: 50px; height: 50px; position: fixed; bottom: 30px; right: 30px; z-index: 50; overflow: hidden; }
+.fixed-wapp img { width: 240%; position: absolute; top: -50%; left: -70%; }
+
+header .main-nav-open { border: 0; background: none; transform: rotate(90deg); width: 50px; height: 50px; }
+header .main-nav .nav-container { position: absolute; z-index: 20; background: #ccc; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: flex-start; padding-top: 60px; display: none; }
+header .main-nav .nav-container-close { border: 0; background: none; position: absolute; top: 20px; right: 20px; }
+header .main-nav .nav-container li { list-style: none; text-align: left; padding: 20px; font-size: 1.5rem; }
+header .main-nav .nav-container a { text-decoration: none; }
+header .logo { font-weight: bolder; font-size: 2rem; }
+header .call-now { border: 0; background: none; width: 50px; height: 50px; }
+
+.hero { position: relative; overflow: hidden; background: url("/assets/images/bookshelf.jpg"); background-size: cover; }
+.hero .hero-content { background: linear-gradient(90.16deg, #040404 5.36%, rgba(255, 255, 255, 0) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3)); color: #ddd; padding: 20px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.hero .hero-content h1 { padding: 5px 0; font-size: 1.5rem; }
+.hero .hero-content h2 { font-size: 1.2rem; padding: 30px 0 10px; }
+.hero .hero-content button { border: none; border-radius: 10px; height: 50px; width: 200px; background: #ddd; font-size: 1.5rem; font-weight: bolder; }
+.hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); }
+
+.get-in-touch { background: #ccc; text-align: left; align-items: flex-start; }
+.get-in-touch h1 { text-align: left; width: 100%; }
+.get-in-touch-call h3 { padding: 10px; }
+.get-in-touch-call p { padding: 5px; }
+.get-in-touch #or { padding: 10px; display: none; }
+.get-in-touch .get-in-touch-form { display: none; }
+
+.articles button { border: 0; background: none; }
+.articles .article { justify-self: flex-start; text-align: left; margin: 20px 0; }
+.articles .article p { padding: 10px 0; }
+
+.about-us p { padding: 20px; }
+
+.follow-us .circles { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; }
