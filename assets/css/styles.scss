@@ -12,6 +12,7 @@
 
 body{
     background:#ddd;
+    font-family: 'Roboto', sans-serif;
 }
 // for header
 header{
@@ -36,8 +37,7 @@ header{
 .get-in-touch,
 .articles,
 .about-us,
-.follow-us,
-.foot{
+.footer{
     height: auto;
     display:flex;
     flex-direction:column;
@@ -280,19 +280,30 @@ header{
 
 //----------------Footer-----------
 //follow
-.follow-us{
-    .circles{
-        display:flex;
-        flex-direction:row;
-        width:100%;
-        justify-content:space-between;
-        padding:20px;
-        font-size:2rem;
-        .circle{
+footer{
+   
+    .follow-us{
+        background:#aaa;
+        padding:20px 0;
+        text-align:center;
+        .circles{
             display:flex;
-            justify-content:center;
-            align-items:center;
+            flex-direction:row;
+            width:100%;
+            justify-content:space-between;
+            padding:20px;
+            font-size:2rem;
+            .circle{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            
         }
-        
+    }
+    //foot
+    .foot{
+        padding:20px;
+        text-align:center;
     }
 }

@@ -1,12 +1,12 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { background: #ddd; }
+body { background: #ddd; font-family: 'Roboto', sans-serif; }
 
 header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 80px; position: fixed; top: 0; left: 0; z-index: 400; background: rgba(255, 255, 255, 0.5); }
 
 .hero { height: 80vh; }
 
-.collection, .get-in-touch, .articles, .about-us, .follow-us, .foot { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin-top: 60px; margin-bottom: 60px; }
+.collection, .get-in-touch, .articles, .about-us, .footer { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin-top: 60px; margin-bottom: 60px; }
 
 .about-us { background: #c1c1c1; border-radius: 67px 0px; }
 
@@ -53,5 +53,7 @@ header .call-now { border: 0; background: none; width: 80px; height: 80px; }
 
 .about-us p { padding: 20px; }
 
-.follow-us .circles { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }
-.follow-us .circles .circle { display: flex; justify-content: center; align-items: center; }
+footer .follow-us { background: #aaa; padding: 20px 0; text-align: center; }
+footer .follow-us .circles { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }
+footer .follow-us .circles .circle { display: flex; justify-content: center; align-items: center; }
+footer .foot { padding: 20px; text-align: center; }
