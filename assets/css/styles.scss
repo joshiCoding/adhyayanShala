@@ -14,7 +14,11 @@ body{
     background:#ddd;
     font-family: 'Roboto', sans-serif;
     // color:#CF5612;
-    color:#BB2E47;
+    // color:#BB2E47;
+    color:#1f2636;
+    a{
+    color:#1f2636;
+    }
 
 
 }
@@ -60,14 +64,17 @@ header{
 
 // ---------components--------
 .box{
-    border:2px solid #a1a1a1;
+    border:2px solid #a0b2db;
+    ;
     border-radius:10px;
     width:90%;
     max-width:500px;
     height:auto;
     margin:20px;
     overflow:hidden;
-    color:#BB2E47;
+    // color:#BB2E47;
+    color:#1f2636;
+
     .box-img{
   
         width:100%;
@@ -123,12 +130,16 @@ header{
         left:-70%
     }
 }
+.active-page{
+    color:#BB2E47;
+}
 // ------Design------
 
 //header
 header{
     svg{
-        fill:#BB2E47;
+        fill:#1f2636;
+
 
     }
   
@@ -148,7 +159,7 @@ header{
            overflow:hidden;
            position:absolute;
            z-index:50;
-           background:#ccc;
+           background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
            top:0;
            left:0;
            width:0;
@@ -175,6 +186,22 @@ header{
            }
            a{
                text-decoration:none;
+               position:relative;
+            }
+           a::before{
+                content:'';
+                position:absolute;
+                bottom:0;
+                right:0;
+                height:2px;
+                width:100%;
+                background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
+                transition:transform 150ms linear;
+                transform:scaleX(0);
+                transform-origin: left;
+           }
+            a:hover::before{
+               transform:scaleX(1);
            }
        }
        .nav-container-open{
@@ -186,7 +213,7 @@ header{
     }
     .logo{
         font-weight:bolder;
-        font-size:2rem;
+        font-size:40px;
     }
     .call-now{
         border:0;
