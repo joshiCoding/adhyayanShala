@@ -13,6 +13,10 @@
 body{
     background:#ddd;
     font-family: 'Roboto', sans-serif;
+    // color:#CF5612;
+    color:#BB2E47;
+
+
 }
 // for header
 header{
@@ -26,7 +30,7 @@ header{
     top:0;
     left:0;
     z-index:400;
-    background:rgba(255,255,255,0.5);
+    background: linear-gradient(90.95deg, #12D6B3 0.13%, rgba(18, 139, 207, 0.51) 99.89%);
 }
 
 //content
@@ -63,6 +67,7 @@ header{
     height:auto;
     margin:20px;
     overflow:hidden;
+    color:#BB2E47;
     .box-img{
   
         width:100%;
@@ -76,7 +81,7 @@ header{
         border-top-left-radius:10px;
         border-top-right-radius:10px;
 
-        background:#a1a1a1;
+        background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
         position:relative;
         p{
             padding:10px;
@@ -122,6 +127,10 @@ header{
 
 //header
 header{
+    svg{
+        fill:#BB2E47;
+
+    }
   
     .main-nav{
         &-btn{
@@ -196,8 +205,11 @@ header{
     background-size:cover;
    
     .hero-content{
-        background: linear-gradient(90.16deg, #040404 5.36%, rgba(255, 255, 255, 0) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3));
+        // background: linear-gradient(90.16deg, #040404 5.36%, rgba(255, 255, 255, 0) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3));
+        background: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3));
         color:#ddd;
+        // color:#2EBBA2;
+        
         padding:20px;
         height:100%;
         display:flex;
@@ -237,7 +249,7 @@ header{
 }
 // get in touch
 .get-in-touch{
-    background:#ccc;
+    background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
     text-align:left;
     align-items:flex-start;
     h1{
@@ -279,6 +291,7 @@ header{
 }
 //about us
 .about-us{
+    background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
     p{
         padding:20px;
     }
@@ -289,7 +302,7 @@ header{
 footer{
    
     .follow-us{
-        background:#aaa;
+        background: linear-gradient(90deg, #259EE2 -4.17%, rgba(22, 226, 189, 0.48) 100%);
         padding:20px 0;
         text-align:center;
         .circles{
