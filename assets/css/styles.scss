@@ -150,6 +150,7 @@ header{
             height:80px;
             background:none;
             padding-left:10px;
+            overflow:hidden;
             svg{
                 width:50px;
                 height:50px;
@@ -163,14 +164,14 @@ header{
            top:0;
            left:0;
            width:0;
-           height:100vh;
+           height:0;
            display:flex;
            flex-direction:column;
            align-items:flex-start;
            padding-top:60px;
-           transition:width 150ms linear;
+           transition:width 150ms linear, height 150ms linear;
 
-           &-close{
+           .nav-close-btn{
                border:0;
                background:none;
                position:absolute;
@@ -206,6 +207,7 @@ header{
        }
        .nav-container-open{
            width:100%;
+           height:100vh;
            li{
                font-size:1.5rem;
            }

@@ -1,8 +1,8 @@
 
 const menu = document.querySelector('.nav-container');
 
-const menuOpenBtn = document.querySelector('.nav-container-open');
-const menuCloseBtn = document.querySelector('.nav-container-close');
+const menuOpenBtn = document.querySelector('.nav-open-btn');
+const menuCloseBtn = document.querySelector('.nav-close-btn');
 
 
 menuOpenBtn.addEventListener('click', e=> {
