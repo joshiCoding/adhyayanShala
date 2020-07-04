@@ -6,10 +6,10 @@ const menuCloseBtn = document.querySelector('.nav-container-close');
 
 
 menuOpenBtn.addEventListener('click', e=> {
-    menu.style.display = "block";
+    menu.classList.add('nav-container-open');
 })
 
 menuCloseBtn.addEventListener('click', e=> {
-    menu.style.display = '';
+    menu.classList.remove('nav-container-open');
 })
 
