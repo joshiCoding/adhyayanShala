@@ -47,7 +47,7 @@ header .call-now { border: 0; background: none; width: 80px; height: 80px; }
 .hero .hero-content button { border: none; border-radius: 10px; height: 50px; width: 200px; background: #ddd; font-size: 1.5rem; font-weight: bolder; }
 .hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); display: flex; justify-content: center; padding-top: 5px; }
 
-.get-in-touch { background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%); text-align: left; align-items: flex-start; }
+.get-in-touch { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); text-align: left; align-items: flex-start; }
 .get-in-touch h1 { text-align: left; width: 100%; }
 .get-in-touch-call h3 { padding: 10px; }
 .get-in-touch-call p { padding: 5px; }
@@ -58,10 +58,10 @@ header .call-now { border: 0; background: none; width: 80px; height: 80px; }
 .articles .article { justify-self: flex-start; text-align: left; margin: 20px 0; }
 .articles .article p { padding: 10px 0; }
 
-.about-us { background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%); }
+.about-us { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); }
 .about-us p { padding: 20px; }
 
-footer .follow-us { background: linear-gradient(90deg, #259EE2 -4.17%, rgba(22, 226, 189, 0.48) 100%); padding: 20px 0; text-align: center; }
+footer .follow-us { background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); padding: 20px 0; text-align: center; }
 footer .follow-us .circles { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }
 footer .follow-us .circles .circle { display: flex; justify-content: center; align-items: center; }
 footer .foot { padding: 20px; text-align: center; }
