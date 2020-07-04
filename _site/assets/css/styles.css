@@ -28,17 +28,21 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 
 header svg { fill: #1f2636; }
 header .main-nav-btn { border: 0; width: 80px; height: 80px; background: none; overflow: hidden; }
-header .main-nav-btn svg { width: 50px; height: 50px; }
+header .main-nav-btn svg { width: 40px; height: 40px; }
 header .main-nav .nav-container { overflow: hidden; position: absolute; z-index: 50; background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%); top: 0; left: 0; width: 0; height: 0; display: flex; flex-direction: column; align-items: flex-start; padding-top: 60px; transition: width 150ms linear, height 150ms linear; }
-header .main-nav .nav-container .nav-close-btn { border: 0; background: none; position: absolute; top: 20px; right: 20px; }
+header .main-nav .nav-container .nav-close-btn { border: 0; background: none; position: absolute; top: 20px; right: 20px; transform: scale(0); transition: transform 350ms linear; }
 header .main-nav .nav-container li { list-style: none; text-align: left; padding: 20px; font-size: 0; transition: font-size 150ms linear; }
 header .main-nav .nav-container a { text-decoration: none; position: relative; }
 header .main-nav .nav-container a::before { content: ''; position: absolute; bottom: 0; right: 0; height: 2px; width: 100%; background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); transition: transform 150ms linear; transform: scaleX(0); transform-origin: left; }
 header .main-nav .nav-container a:hover::before { transform: scaleX(1); }
 header .main-nav .nav-container-open { width: 100%; height: 100vh; }
+header .main-nav .nav-container-open .nav-close-btn { transform: scale(1) rotate(360deg); }
 header .main-nav .nav-container-open li { font-size: 1.5rem; }
-header .logo { font-weight: bolder; font-size: 40px; }
+header .logo { font-weight: bolder; font-size: 35px; }
 header .call-now { border: 0; background: none; width: 80px; height: 80px; }
+header .call-now svg { height: 30px; width: 30px; }
+header .call-now:active { transform: rotate(3600deg); transition: transform 6s linear; }
+header .call-now:hover { transform: rotate(360deg); transition: transform 350ms linear; }
 
 .hero { position: relative; overflow: hidden; background: url("http://localhost:4000/adhyayanshala/assets/images/bookshelf-min.jpg"); background-size: cover; }
 .hero .hero-content { background: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3)); color: #ddd; padding: 20px; height: 100%; display: flex; flex-direction: column; justify-content: center; }

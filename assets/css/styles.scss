@@ -152,8 +152,8 @@ header{
             // padding-left:10px;
             overflow:hidden;
             svg{
-                width:50px;
-                height:50px;
+                width:40px;
+                height:40px;
             }
        }
        .nav-container{
@@ -177,6 +177,8 @@ header{
                position:absolute;
                top:20px;
                right:20px;
+               transform:scale(0);
+               transition:transform 350ms linear;
            }
            li{
                list-style:none;
@@ -208,6 +210,10 @@ header{
        .nav-container-open{
            width:100%;
            height:100vh;
+           .nav-close-btn{
+               transform:scale(1) rotate(360deg);
+
+           }
            li{
                font-size:1.5rem;
            }
@@ -215,13 +221,26 @@ header{
     }
     .logo{
         font-weight:bolder;
-        font-size:40px;
+        font-size:35px;
     }
     .call-now{
         border:0;
         background:none;
         width:80px;
         height:80px;
+        svg{
+            height:30px;
+            width:30px;
+        }
+    }
+
+    .call-now:active {
+        transform:rotate(3600deg);
+        transition:transform 6s linear;
+    }
+    .call-now:hover{
+        transform:rotate(360deg);
+        transition:transform 350ms linear;
     }
 }
 //hero
