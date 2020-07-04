@@ -27,7 +27,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 .active-page { color: #BB2E47; }
 
 header svg { fill: #1f2636; }
-header .main-nav-btn { border: 0; width: 100px; height: 80px; background: none; padding-left: 10px; overflow: hidden; }
+header .main-nav-btn { border: 0; width: 80px; height: 80px; background: none; overflow: hidden; }
 header .main-nav-btn svg { width: 50px; height: 50px; }
 header .main-nav .nav-container { overflow: hidden; position: absolute; z-index: 50; background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%); top: 0; left: 0; width: 0; height: 0; display: flex; flex-direction: column; align-items: flex-start; padding-top: 60px; transition: width 150ms linear, height 150ms linear; }
 header .main-nav .nav-container .nav-close-btn { border: 0; background: none; position: absolute; top: 20px; right: 20px; }
