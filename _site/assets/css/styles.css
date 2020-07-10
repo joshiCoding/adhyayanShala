@@ -8,6 +8,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 .hero { height: 80vh; }
 
 .class-info, .fee-info, .teaching-info, .get-in-touch, .collection, .about-us, .articles, .footer { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin-top: 60px; margin-bottom: 60px; }
+.class-info h1, .fee-info h1, .teaching-info h1, .get-in-touch h1, .collection h1, .about-us h1, .articles h1, .footer h1 { font-size: 2.5rem; margin: 10px 0; }
 
 .about-us { background: #c1c1c1; border-radius: 67px 0px; }
 
@@ -26,7 +27,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 
 .active-page { color: #BB2E47; }
 
-.to-contact-btn { width: 100%; border: 2px solid red; border-radius: 20px; background: lightblue; padding: 10px; font-size: 25px; margin-top: 10px; }
+.to-contact-btn { width: 100%; border: none; background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); border-radius: 20px; padding: 10px; font-size: 25px; margin-top: 10px; }
 
 .band { background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); padding: 20px 0; text-align: center; }
 .band .medias { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }
@@ -57,12 +58,12 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 .hero .hero-content button { border: none; border-radius: 10px; height: 50px; width: 200px; background: #ddd; font-size: 1.5rem; font-weight: bolder; }
 .hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); display: flex; justify-content: center; padding-top: 5px; }
 
-.class-info { padding: 40px; }
+.class-info { padding: 40px; margin-top: 0; }
 .class-info #class-type-container { width: 100%; display: flex; justify-content: space-between; align-items: center; }
-.class-info #class-type-container .class-type { border: 2px solid red; border-radius: 20px; margin: 20px; background: lightblue; padding: 5px 15px; }
-.class-info .classroom { border: 2px solid red; border-radius: 20px; width: 100%; height: auto; }
+.class-info #class-type-container .class-type-btn { border: none; background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); border-radius: 10px; margin: 20px; padding: 5px 15px; font-size: 1.2em; }
+.class-info .classroom { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); border-radius: 20px; width: 100%; height: auto; }
 .class-info .classroom h3 { padding: 30px 10px 10px 10px; }
-.class-info .classroom .class { border: 2px solid red; border-radius: 20px; display: inline-block; background: lightblue; padding: 10px 20px; margin: 20px; }
+.class-info .classroom .class { border: none; background: #0a7569; color: #fff; border-radius: 20px; display: inline-block; padding: 10px 20px; margin: 20px; }
 .class-info .classroom #board-type { padding: 5px; }
 .class-info .classroom .benefits { text-align: left; padding: 15px; }
 .class-info .classroom .benefits button { border: none; background: transparent; font-size: 1em; font-weight: bold; }
@@ -71,8 +72,8 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 
 .fee-info, .teaching-info { padding: 0; display: block; }
 .fee-info h1, .teaching-info h1 { padding: 15px; }
-.fee-info .circle-points, .teaching-info .circle-points { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; margin: 10px 30px; }
-.fee-info .circle-points .circle, .teaching-info .circle-points .circle { border: 2px solid red; display: inline-block; width: 100px; height: 100px; border-radius: 50%; }
+.fee-info .circle-points, .teaching-info .circle-points { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; margin: 10px 20px; }
+.fee-info .circle-points .circle, .teaching-info .circle-points .circle { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); display: inline-block; width: 100px; height: 100px; border-radius: 50%; }
 .fee-info .circle-points p, .teaching-info .circle-points p { width: 150px; padding: 10px; }
 .fee-info #detailed-fee, .teaching-info #detailed-fee { font-weight: 300; margin-top: 20px; }
 .fee-info .detailed-fee-enquiry-btn, .teaching-info .detailed-fee-enquiry-btn { width: 90%; }
