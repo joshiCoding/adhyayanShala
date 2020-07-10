@@ -1,4 +1,4 @@
-
+// for menu button
 const menu = document.querySelector('.nav-container');
 
 const menuOpenBtn = document.querySelector('.nav-open-btn');
