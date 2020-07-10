@@ -1,5 +1,5 @@
 --- 
-# This is front matter of jekyll
+
 --- 
 
 *{
@@ -84,11 +84,11 @@ header{
              transform: translateY(-50%);
         }
         &::before{
-            right:100%;
+            right:105%;
     
         }
         &::after{
-            left:100%;
+            left:105%;
         }
     }
    
@@ -181,10 +181,12 @@ header{
 .to-contact-btn{
     width:100%;
     border:none;
-    background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
     border-radius:20px;
+    background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
+    color:#fff;
     padding:10px;
     font-size:25px;
+    font-weight:bold;
     margin-top:10px;
 
 }
@@ -451,29 +453,6 @@ header{
     width:100%;
     margin-top:20px;
     overflow:hidden;
-    h1{
-        // padding:15px 0;
-        // position:relative;
-        // display:inline-block;
-        // margin:20px 20px;
-        // &::before,
-        // &::after{
-        //     content:'';
-        //     background:#1f2a46;
-        //     width:100vw;
-        //     height:10px;
-        //     position: absolute;
-        //     top:50%;
-        //      transform: translateY(-50%);
-        // }
-        // &::before{
-        //     right:100%;
-
-        // }
-        // &::after{
-        //     left:100%;
-        // }
-    }
     .circle-points{
         display:inline-flex;
         flex-direction:column;

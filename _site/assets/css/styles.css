@@ -12,8 +12,8 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 
 .class-info h1, .fee-info h1, .teaching-info h1 { padding: 15px 0; position: relative; display: inline-block; }
 .class-info h1::before, .class-info h1::after, .fee-info h1::before, .fee-info h1::after, .teaching-info h1::before, .teaching-info h1::after { content: ''; background: #1f2a46; width: 100vw; height: 10px; position: absolute; top: 50%; transform: translateY(-50%); }
-.class-info h1::before, .fee-info h1::before, .teaching-info h1::before { right: 100%; }
-.class-info h1::after, .fee-info h1::after, .teaching-info h1::after { left: 100%; }
+.class-info h1::before, .fee-info h1::before, .teaching-info h1::before { right: 105%; }
+.class-info h1::after, .fee-info h1::after, .teaching-info h1::after { left: 105%; }
 
 .about-us { background: #c1c1c1; border-radius: 67px 0px; }
 
@@ -32,7 +32,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 
 .active-page { color: #BB2E47; }
 
-.to-contact-btn { width: 100%; border: none; background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); border-radius: 20px; padding: 10px; font-size: 25px; margin-top: 10px; }
+.to-contact-btn { width: 100%; border: none; border-radius: 20px; background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); color: #fff; padding: 10px; font-size: 25px; font-weight: bold; margin-top: 10px; }
 
 .band { background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); padding: 20px 0; text-align: center; }
 .band .medias { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }

@@ -20,7 +20,7 @@ const enquireBtn = document.querySelector('.enquire');
 console.log(enquireBtn);
 
 enquireBtn.addEventListener('click', e=>{
-    smoothScroll('info-get');
+    smoothScroll('class-info');
 });
 
 //copied from stackoverflow
