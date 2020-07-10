@@ -8,7 +8,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 .hero { height: 80vh; }
 
 .class-info, .fee-info, .teaching-info, .get-in-touch, .collection, .about-us, .articles, .footer { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin-top: 60px; margin-bottom: 60px; overflow: hidden; }
-.class-info h1, .fee-info h1, .teaching-info h1, .get-in-touch h1, .collection h1, .about-us h1, .articles h1, .footer h1 { font-size: 2.5rem; margin: 20px 0; }
+.class-info h1, .fee-info h1, .teaching-info h1, .get-in-touch h1, .collection h1, .about-us h1, .articles h1, .footer h1 { font-size: 35px; margin: 20px 0; }
 
 .class-info h1, .fee-info h1, .teaching-info h1 { padding: 15px 0; position: relative; display: inline-block; }
 .class-info h1::before, .class-info h1::after, .fee-info h1::before, .fee-info h1::after, .teaching-info h1::before, .teaching-info h1::after { content: ''; background: #1f2a46; width: 100vw; height: 10px; position: absolute; top: 50%; transform: translateY(-50%); }
