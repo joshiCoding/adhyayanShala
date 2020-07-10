@@ -58,8 +58,8 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 
 .hero { position: relative; overflow: hidden; background: url("http://localhost:4000/adhyayanshala/assets/images/bookshelf-min.jpg"); background-size: cover; }
 .hero .hero-content { background: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3)); color: #ddd; padding: 20px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
-.hero .hero-content h1 { padding: 5px 0; font-size: 1.5rem; }
-.hero .hero-content h2 { font-size: 1.5rem; padding: 30px 0 10px; }
+.hero .hero-content h1 { padding: 5px 0; font-size: 40px; }
+.hero .hero-content h2 { font-size: 30px; padding: 30px 0 10px; }
 .hero .hero-content button { border: none; border-radius: 10px; height: 50px; width: 200px; background: #ddd; font-size: 1.5rem; font-weight: bolder; }
 .hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); display: flex; justify-content: center; padding-top: 5px; }
 
