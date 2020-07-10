@@ -7,7 +7,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 
 .hero { height: 80vh; }
 
-.get-info, .get-in-touch, .collection, .about-us, .articles, .footer { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin-top: 60px; margin-bottom: 60px; }
+.class-info, .fee-info, .teaching-info, .get-in-touch, .collection, .about-us, .articles, .footer { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin-top: 60px; margin-bottom: 60px; }
 
 .about-us { background: #c1c1c1; border-radius: 67px 0px; }
 
@@ -21,12 +21,16 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 .box .box-content .box-author { position: absolute; bottom: 10%; left: 5%; }
 .box .box-content .box-price { position: absolute; bottom: 10%; right: 5%; }
 
-.circle { border: 2px solid #aaa; width: 50px; height: 50px; border-radius: 50%; }
-
 .fixed-wapp { border-radius: 10px; width: 50px; height: 50px; position: fixed; bottom: 30px; right: 30px; z-index: 20; overflow: hidden; }
 .fixed-wapp img { width: 240%; position: absolute; top: -50%; left: -70%; }
 
 .active-page { color: #BB2E47; }
+
+.to-contact-btn { width: 100%; border: 2px solid red; border-radius: 20px; background: lightblue; padding: 10px; font-size: 25px; margin-top: 10px; }
+
+.band { background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); padding: 20px 0; text-align: center; }
+.band .medias { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }
+.band .medias .media { display: flex; justify-content: center; align-items: center; }
 
 header svg { fill: #1f2636; }
 header .main-nav-btn { border: 0; width: 80px; height: 80px; background: none; overflow: hidden; }
@@ -53,6 +57,30 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 .hero .hero-content button { border: none; border-radius: 10px; height: 50px; width: 200px; background: #ddd; font-size: 1.5rem; font-weight: bolder; }
 .hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); display: flex; justify-content: center; padding-top: 5px; }
 
+.class-info { padding: 40px; }
+.class-info #class-type-container { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+.class-info #class-type-container .class-type { border: 2px solid red; border-radius: 20px; margin: 20px; background: lightblue; padding: 5px 15px; }
+.class-info .classroom { border: 2px solid red; border-radius: 20px; width: 100%; height: auto; }
+.class-info .classroom h3 { padding: 30px 10px 10px 10px; }
+.class-info .classroom .class { border: 2px solid red; border-radius: 20px; display: inline-block; background: lightblue; padding: 10px 20px; margin: 20px; }
+.class-info .classroom #board-type { padding: 5px; }
+.class-info .classroom .benefits { text-align: left; padding: 15px; }
+.class-info .classroom .benefits button { border: none; background: transparent; font-size: 1em; font-weight: bold; }
+.class-info .classroom .benefits .benefit { margin: 10px 20px; display: none; }
+.class-info #demo-info { padding: 30px 10px; font-size: 1.3em; letter-spacing: 1px; font-weight: bold; }
+
+.fee-info, .teaching-info { padding: 0; display: block; }
+.fee-info h1, .teaching-info h1 { padding: 15px; }
+.fee-info .circle-points, .teaching-info .circle-points { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; margin: 10px 30px; }
+.fee-info .circle-points .circle, .teaching-info .circle-points .circle { border: 2px solid red; display: inline-block; width: 100px; height: 100px; border-radius: 50%; }
+.fee-info .circle-points p, .teaching-info .circle-points p { width: 150px; padding: 10px; }
+.fee-info #detailed-fee, .teaching-info #detailed-fee { font-weight: 300; margin-top: 20px; }
+.fee-info .detailed-fee-enquiry-btn, .teaching-info .detailed-fee-enquiry-btn { width: 90%; }
+
+.accepted-fee-type h3 { font-size: 25px; }
+.accepted-fee-type .medias .media { font-size: 20px; }
+.accepted-fee-type p { font-weight: 300; }
+
 .get-in-touch { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); text-align: left; align-items: flex-start; }
 .get-in-touch h1 { text-align: left; width: 100%; }
 .get-in-touch-call h3 { padding: 10px; }
@@ -67,7 +95,4 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 .about-us { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); }
 .about-us p { padding: 20px; }
 
-footer .follow-us { background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); padding: 20px 0; text-align: center; }
-footer .follow-us .circles { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }
-footer .follow-us .circles .circle { display: flex; justify-content: center; align-items: center; }
 footer .foot { padding: 20px; text-align: center; }

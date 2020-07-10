@@ -41,7 +41,9 @@ header{
 .hero{
     height:80vh;
 }
-.get-info,
+.class-info,
+.fee-info,
+.teaching-info,
 .get-in-touch,
 .collection,
 .about-us,
@@ -119,12 +121,6 @@ header{
         }
     }
 }
-.circle{
-    border:2px solid #aaa;
-    width:50px;
-    height:50px;
-    border-radius:50%;
-}
 
 .fixed-wapp{
     border-radius:10px;
@@ -145,6 +141,44 @@ header{
 .active-page{
     color:#BB2E47;
 }
+
+//common button throughout design
+.to-contact-btn{
+    width:100%;
+    border:2px solid red;
+    border-radius:20px;
+    background:lightblue;
+    padding:10px;
+    font-size:25px;
+    margin-top:10px;
+
+}
+// band design
+.band{
+    background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
+    padding:20px 0;
+    text-align:center;
+    .medias{
+        display:flex;
+        flex-direction:row;
+        width:100%;
+        justify-content:space-between;
+        padding:20px;
+        font-size:2rem;
+        .media{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        
+    }
+}
+
+
+
+
+
+
 // ------Design------
 
 //header
@@ -307,6 +341,121 @@ header{
         padding-top:5px;
     }
 }
+
+// class information
+.class-info{
+    padding:40px;
+    #class-type-container{
+        // border:2px solid red;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        .class-type{
+            border:2px solid red;
+            border-radius:20px;
+            margin:20px;
+            background:lightblue;
+            padding:5px 15px;
+        }
+    }
+    .classroom{
+        border:2px solid red;
+        border-radius:20px;
+        width:100%;
+        height:auto;
+        h3{
+            padding:30px 10px 10px 10px;
+        }
+       
+        .class{
+            border:2px solid red;
+            border-radius:20px;
+            display:inline-block;
+            background:lightblue;
+            padding:10px 20px;
+            margin:20px;
+        }
+        #board-type{
+            padding:5px;
+        }
+        .benefits{
+            text-align:left;
+            padding:15px;
+            button{
+                border:none;
+                background:transparent;
+                font-size:1em;
+                font-weight:bold;
+            }
+            .benefit{
+                margin: 10px 20px;
+                display:none;
+            }
+            
+        }
+    }
+    #demo-info{
+        padding:30px 10px;
+        font-size:1.3em;
+        letter-spacing:1px;
+        font-weight:bold;
+    }
+   
+   
+}
+//fee structure
+.fee-info,
+.teaching-info{
+    padding:0;
+    display:block;
+    h1{
+        padding:15px;
+    }
+    .circle-points{
+        display:inline-flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin: 10px 30px;
+        .circle{
+            border:2px solid red;
+            display:inline-block;
+            width:100px;
+            height:100px;
+            border-radius:50%;
+        }
+        p{
+            width:150px;
+            padding:10px;
+        }
+    }
+    #detailed-fee{
+        font-weight:300;
+        margin-top:20px;
+    }
+    .detailed-fee-enquiry-btn{
+        width:90%;
+    }
+}
+
+//accepted fee type
+.accepted-fee-type{
+    h3{
+        font-size:25px;
+    }
+    .medias{
+        .media{
+            font-size:20px;
+        }
+    }
+    p{
+        font-weight:300;
+    }
+}
+
+
+
 // get in touch
 .get-in-touch{
     // background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
@@ -364,27 +513,6 @@ header{
 //----------------Footer-----------
 //follow
 footer{
-   
-    .follow-us{
-        // background: linear-gradient(90deg, #259EE2 -4.17%, rgba(22, 226, 189, 0.48) 100%);
-        background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
-        padding:20px 0;
-        text-align:center;
-        .circles{
-            display:flex;
-            flex-direction:row;
-            width:100%;
-            justify-content:space-between;
-            padding:20px;
-            font-size:2rem;
-            .circle{
-                display:flex;
-                justify-content:center;
-                align-items:center;
-            }
-            
-        }
-    }
     //foot
     .foot{
         padding:20px;
