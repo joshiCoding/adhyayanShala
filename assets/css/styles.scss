@@ -347,7 +347,7 @@ header{
         justify-content:center;
         h1{
             padding:5px 0;
-            font-size:40px;
+            font-size:35px;
         }
         h2{
             font-size:30px;
@@ -383,6 +383,10 @@ header{
     padding:40px;
     margin-top:0;
     margin-bottom:0;
+    h1{
+        margin:0;
+        padding:0;
+    }
     
     #class-type-container{
         width:100%;
