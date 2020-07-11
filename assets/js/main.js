@@ -7,6 +7,7 @@ const menuCloseBtn = document.querySelector('.nav-close-btn');
 
 menuOpenBtn.addEventListener('click', e=> {
     menu.classList.add('nav-container-open');
+    
 })
 
 menuCloseBtn.addEventListener('click', e=> {
@@ -17,7 +18,6 @@ menuCloseBtn.addEventListener('click', e=> {
 //for scroll function on enquire button
 const enquireBtn = document.querySelector('.enquire');
 // const moveToClassInfo = document.querySelector('');
-console.log(enquireBtn);
 
 enquireBtn.addEventListener('click', e=>{
     smoothScroll('class-info');
@@ -57,3 +57,27 @@ function smoothScroll(elementId){
 
     window.requestAnimationFrame(stepFunc);
 }
+
+
+//class type button
+const classroomBtn = document.querySelector(".classroom-btn");
+const oneononeBtn = document.querySelector('.one-on-one-btn');
+
+const classTypeContainer = document.querySelector('.class-type-container');
+
+
+console.log(classroomBtn);
+console.log(oneononeBtn);
+console.log(classTypeContainer);
+oneononeBtn.addEventListener('click', e=>{
+    classTypeContainer.style.marginLeft = '-100%';
+
+    oneononeBtn.classList.remove('class-type-goto');
+    classroomBtn.classList.add('class-type-goto');
+});
+classroomBtn.addEventListener('click',e =>{
+    classTypeContainer.style.marginLeft = '100%';
+
+    oneononeBtn.classList.add('class-type-goto');
+    classroomBtn.classList.remove('class-type-goto');
+})

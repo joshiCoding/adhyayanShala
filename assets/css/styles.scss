@@ -2,6 +2,15 @@
 
 --- 
 
+:root{
+    --font-color:#1f2636;
+    --gradient-right: linear-gradient(90.95deg, #12D6B3 0.13%, rgba(18, 139, 207, 0.51) 99.89%);
+    --gradient-right-dark:linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
+    --gradient-right-darker: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
+    --gradient-left-dark:linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
+    --gradient-left-lighter: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3));
+}
+
 *{
     margin : 0;
     padding : 0;
@@ -15,9 +24,9 @@ body{
     font-family: 'Lato', sans-serif;
     // color:#CF5612;
     // color:#BB2E47;
-    color:#1f2636;
+    color:var(--font-color);
     a{
-    color:#1f2636;
+    color:var(--font-color);
     }
 
 
@@ -34,7 +43,7 @@ header{
     top:0;
     left:0;
     z-index:400;
-    background: linear-gradient(90.95deg, #12D6B3 0.13%, rgba(18, 139, 207, 0.51) 99.89%);
+    background: var(--gradient-right);
 }
 
 //content
@@ -123,7 +132,7 @@ header{
     margin:20px;
     overflow:hidden;
     // color:#BB2E47;
-    color:#1f2636;
+    color:var(--font-color);
 
     .box-img{
   
@@ -138,7 +147,7 @@ header{
         border-top-left-radius:10px;
         border-top-right-radius:10px;
 
-        background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
+        background: var(--gradient-right-dark);
         position:relative;
         p{
             padding:10px;
@@ -183,7 +192,7 @@ header{
     width:100%;
     border:none;
     border-radius:20px;
-    background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
+    background: var(--gradient-left-dark);
     color:#fff;
     padding:10px;
     font-size:25px;
@@ -193,7 +202,7 @@ header{
 }
 // band design
 .band{
-    background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
+    background:var(--gradient-right-dark);
     padding:20px 0;
     text-align:center;
     .medias{
@@ -222,9 +231,7 @@ header{
 //header
 header{
     svg{
-        fill:#1f2636;
-
-
+        fill:var(--font-color);
     }
   
     .main-nav{
@@ -233,7 +240,6 @@ header{
             width:80px;
             height:80px;
             background:none;
-            // padding-left:10px;
             overflow:hidden;
             svg{
                 width:40px;
@@ -244,11 +250,11 @@ header{
            overflow:hidden;
            position:fixed;
            z-index:50;
-           background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
+           background:var(--gradient-right-darker);
            top:0;
            left:0;
            margin-left:-100vw;
-           width:60vw;
+           width:100vw;
            height:100vh;
            display:flex;
            flex-direction:column;
@@ -340,7 +346,7 @@ header{
 
    
     .hero-content{
-        background: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3));
+        background:var(--gradient-left-lighter);
         color:#ddd;
         padding:20px;
         height:100%;
@@ -395,53 +401,77 @@ header{
         display:flex;
         justify-content:space-between;
         align-items:center;
+      
         .class-type-btn{
             border:none;
             background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
+            background:var(--gradient-left-dark);
             border-radius:10px;
             margin:20px;
             padding:5px 15px;
             font-size:1.2em;
         }
-    }
-    .classroom{
-        background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
-        border-radius:20px;
-        width:100%;
-        height:auto;
-        h3{
-            padding:30px 10px 10px 10px;
-            font-size:1.5rem;
+        .class-type-goto{
+            background:none;
+            position:relative;
+            &::after{
+                position:absolute;
+                content:'';
+                bottom:0;
+                left:0;
+                width:100%;
+                height:2px;
+                background:var(--font-color);
+            }
         }
-       
-        .class{
-            border:none;
-            background: #0a7569;
-            color:#fff;
+    }
+    .class-type-container{
+        display:flex;
+        width:200%;
+        margin-left:100%;
+        transition:margin-left 350ms linear;
+
+        .class-type-box{
+            margin: 0 40px;
+            background:var(--gradient-left-dark);
             border-radius:20px;
-            display:inline-block;
-            padding:10px 20px;
-            margin:20px;
-        }
-        #board-type{
-            padding:5px;
-        }
-        .benefits{
-            text-align:left;
-            padding:15px;
-            button{
+            width:100%;
+            height:auto;
+            h3{
+                padding:30px 10px 10px 10px;
+                font-size:1.5rem;
+            }
+           
+            .class{
                 border:none;
-                background:transparent;
-                font-size:1em;
-                font-weight:bold;
+                background: #0a7569;
+                color:#fff;
+                border-radius:20px;
+                display:inline-block;
+                padding:10px 20px;
+                margin:20px;
             }
-            .benefit{
-                margin: 10px 20px;
-                display:none;
+            #board-type{
+                padding:5px;
             }
-            
+            .benefits{
+                text-align:left;
+                padding:15px;
+                button{
+                    border:none;
+                    background:transparent;
+                    font-size:1em;
+                    font-weight:bold;
+                }
+                .benefit{
+                    margin: 10px 20px;
+                    display:none;
+                }
+                
+            }
         }
     }
+
     #demo-info{
         padding:30px 10px;
         font-size:1.3em;
