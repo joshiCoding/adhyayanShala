@@ -388,7 +388,8 @@ header{
 
 // class information
 .class-info{
-    padding:40px;
+    --spacing:20px;
+    padding:var(--spacing);
     margin-top:0;
     margin-bottom:0;
     h1{
@@ -432,7 +433,7 @@ header{
         transition:margin-left 350ms linear;
 
         .class-type-box{
-            margin: 0 40px;
+            margin: 0 var(--spacing);
             background:var(--gradient-left-dark);
             border-radius:20px;
             width:100%;
