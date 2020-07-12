@@ -261,14 +261,14 @@ header{
            background:var(--gradient-right-darker);
            top:0;
            left:0;
-           margin-left:-100vw;
-           width:100vw;
+        //    margin-left:-100vw;
+           width:0;
            height:100vh;
            display:flex;
            flex-direction:column;
            align-items:flex-start;
            padding-top:60px;
-           transition:margin-left 350ms linear;
+           transition:width 150ms linear;
 
            .nav-close-btn{
                border:0;
@@ -277,7 +277,7 @@ header{
                top:20px;
                right:20px;
                transform:scale(0);
-               transition:transform 150ms linear;
+               transition:transform 350ms linear;
            }
            li{
                list-style:none;
@@ -307,7 +307,7 @@ header{
            }
        }
        .nav-container-open{
-            margin:0;
+            width:70vw;
            .nav-close-btn{
                transform:scale(1) rotate(360deg);
 

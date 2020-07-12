@@ -4,15 +4,23 @@ const menu = document.querySelector('.nav-container');
 const menuOpenBtn = document.querySelector('.nav-open-btn');
 const menuCloseBtn = document.querySelector('.nav-close-btn');
 
-
 menuOpenBtn.addEventListener('click', e=> {
     menu.classList.add('nav-container-open');
-    
-})
+
+
+    document.querySelector('body').addEventListener('click', e=>{
+        if(!e.target.classList.contains('nav-container') && menu.clientWidth !== 0){
+            menu.classList.remove('nav-container-open');
+        }
+    })
+});
+
+
+
 
 menuCloseBtn.addEventListener('click', e=> {
     menu.classList.remove('nav-container-open');
-})
+});
 
 
 //-----------for scroll function on enquire button------
