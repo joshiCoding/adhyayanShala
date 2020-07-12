@@ -8,6 +8,7 @@ body a { color: var(--font-color); }
 header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 80px; position: fixed; top: 0; left: 0; z-index: 400; background: var(--gradient-right); }
 
 .hero { height: 70vh; }
+.hero button a { text-decoration: none; }
 
 .class-info, .fee-info, .teaching-info, .get-in-touch, .collection, .about-us, .articles, .footer { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--spacer); margin-top: 60px; margin-bottom: 60px; overflow: hidden; }
 .class-info h1, .fee-info h1, .teaching-info h1, .get-in-touch h1, .collection h1, .about-us h1, .articles h1, .footer h1 { font-size: var(--font-size-heading); margin: 20px 0; }
@@ -16,6 +17,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 .class-info h1::before, .class-info h1::after, .fee-info h1::before, .fee-info h1::after, .teaching-info h1::before, .teaching-info h1::after { content: ''; background: #1f2a46; width: 100vw; height: 10px; position: absolute; top: 50%; transform: translateY(-50%); }
 .class-info h1::before, .fee-info h1::before, .teaching-info h1::before { right: 105%; }
 .class-info h1::after, .fee-info h1::after, .teaching-info h1::after { left: 105%; }
+.class-info button a, .fee-info button a, .teaching-info button a { text-decoration: none; }
 
 .about-us { background: #c1c1c1; border-radius: 67px 0px; }
 
@@ -49,9 +51,11 @@ header .main-nav .nav-container li { list-style: none; text-align: left; padding
 header .main-nav .nav-container a { text-decoration: none; position: relative; }
 header .main-nav .nav-container a::before { content: ''; position: absolute; bottom: 0; right: 0; height: 2px; width: 100%; background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); transition: transform 150ms linear; transform: scaleX(0); transform-origin: left; }
 header .main-nav .nav-container a:hover::before { transform: scaleX(1); }
+header .main-nav .nav-container .follow { width: 100%; position: absolute; bottom: 0; background: inherit; transform: scale(0); transition: transform 100ms linear; }
 header .main-nav .nav-container-open { width: 70vw; }
 header .main-nav .nav-container-open .nav-close-btn { transform: scale(1) rotate(360deg); }
 header .main-nav .nav-container-open li { font-size: 1.5rem; }
+header .main-nav .nav-container-open .follow { transform: scale(1); }
 header .logo { font-weight: bolder; font-size: 35px; }
 header .call-now { border: 0; background: none; width: 80px; height: 80px; }
 header .call-now svg { height: 30px; width: 30px; }

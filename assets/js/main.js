@@ -83,17 +83,22 @@ menuCloseBtn.addEventListener('click', e=> {
 // });
 
 //smooth scroll function of the library smooth scroll
-var scroll1 = new SmoothScroll('.enquire-anchor', {
-    speed : 800,
-    updateURL:false,
-    offset:80
-});
-var scroll2 = new SmoothScroll('.book-demo-anchor', {
-    speed : 800,
-    updateURL:false,
-    offset:80
-});
-var scroll3 = new SmoothScroll('.detailed-fee-enquiry-anchor', {
+// var scroll1 = new SmoothScroll('.enquire-anchor', {
+//     speed : 800,
+//     updateURL:false,
+//     offset:80
+// });
+// var scroll2 = new SmoothScroll('.book-demo-anchor', {
+//     speed : 800,
+//     updateURL:false,
+//     offset:80
+// });
+// var scroll3 = new SmoothScroll('.detailed-fee-enquiry-anchor', {
+//     speed : 800,
+//     updateURL:false,
+//     offset:80
+// });
+var scroll = new SmoothScroll('.smooth-scroll', {
     speed : 800,
     updateURL:false,
     offset:80

@@ -57,6 +57,11 @@ header{
 //content
 .hero{
     height:70vh;
+    button{
+        a{
+            text-decoration:none;
+        }
+    }
 }
 .class-info,
 .fee-info,
@@ -107,6 +112,11 @@ header{
         }
         &::after{
             left:105%;
+        }
+    }
+    button{
+        a{
+            text-decoration:none;
         }
     }
    
@@ -261,7 +271,7 @@ header{
            background:var(--gradient-right-darker);
            top:0;
            left:0;
-        //    margin-left:-100vw;
+         //    margin-left:-100vw;
            width:0;
            height:100vh;
            display:flex;
@@ -269,7 +279,6 @@ header{
            align-items:flex-start;
            padding-top:60px;
            transition:width 150ms linear;
-
            .nav-close-btn{
                border:0;
                background:none;
@@ -305,6 +314,15 @@ header{
             a:hover::before{
                transform:scaleX(1);
            }
+
+           .follow{
+               width:100%;
+               position:absolute;
+               bottom:0;
+               background: inherit;
+               transform:scale(0);
+               transition:transform 100ms linear;
+           }
        }
        .nav-container-open{
             width:70vw;
@@ -314,6 +332,9 @@ header{
            }
            li{
                font-size:1.5rem;
+           }
+           .follow{
+               transform:scale(1);
            }
        }
     }
