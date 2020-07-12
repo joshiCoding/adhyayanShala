@@ -1,4 +1,4 @@
-:root { --font-color:#1f2636; --gradient-right: linear-gradient(90.95deg, #12D6B3 0.13%, rgba(18, 139, 207, 0.51) 99.89%); --gradient-right-dark:linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); --gradient-right-darker: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%); --gradient-left-dark:linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); --gradient-left-lighter: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3)); }
+:root { --font-color:#1f2636; --gradient-right: linear-gradient(90.95deg, #12D6B3 0.13%, rgba(18, 139, 207, 0.51) 99.89%); --gradient-right-dark:linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); --gradient-right-darker: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%); --gradient-left-dark:linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); --gradient-left-lighter: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3)); --font-size-heading:30px; --font-size-hero-h1:30px; --font-size-hero-h2:25px; --spacer:40px; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -9,8 +9,8 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 
 .hero { height: 70vh; }
 
-.class-info, .fee-info, .teaching-info, .get-in-touch, .collection, .about-us, .articles, .footer { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin-top: 60px; margin-bottom: 60px; overflow: hidden; }
-.class-info h1, .fee-info h1, .teaching-info h1, .get-in-touch h1, .collection h1, .about-us h1, .articles h1, .footer h1 { font-size: 35px; margin: 20px 0; }
+.class-info, .fee-info, .teaching-info, .get-in-touch, .collection, .about-us, .articles, .footer { height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--spacer); margin-top: 60px; margin-bottom: 60px; overflow: hidden; }
+.class-info h1, .fee-info h1, .teaching-info h1, .get-in-touch h1, .collection h1, .about-us h1, .articles h1, .footer h1 { font-size: var(--font-size-heading); margin: 20px 0; }
 
 .class-info h1, .fee-info h1, .teaching-info h1 { padding: 15px 0; position: relative; display: inline-block; }
 .class-info h1::before, .class-info h1::after, .fee-info h1::before, .fee-info h1::after, .teaching-info h1::before, .teaching-info h1::after { content: ''; background: #1f2a46; width: 100vw; height: 10px; position: absolute; top: 50%; transform: translateY(-50%); }
@@ -60,30 +60,30 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 
 .hero { position: relative; overflow: hidden; background: url("http://localhost:4000/adhyayanshala/assets/images/bookshelf-min.jpg"); background-size: cover; }
 .hero .hero-content { background: var(--gradient-left-lighter); color: #ddd; padding: 20px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
-.hero .hero-content h1 { padding: 5px 0; font-size: 35px; }
-.hero .hero-content h2 { font-size: 30px; padding: 30px 0 10px; }
+.hero .hero-content h1 { padding: 5px 0; font-size: var(--font-size-hero-h1); }
+.hero .hero-content h2 { font-size: var(--font-size-hero-h2); padding: 30px 0 10px; }
 .hero .hero-content button { border: none; border-radius: 10px; height: 50px; width: 200px; background: #ddd; font-size: 1.5rem; font-weight: bolder; }
 .hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); display: flex; justify-content: center; padding-top: 5px; }
 
-.class-info { --spacing:20px; padding: var(--spacing); margin-top: 0; margin-bottom: 0; }
+.class-info { --spacing:20px; padding: calc( 2 * var(--spacer)) var(--spacing); margin-top: 0; margin-bottom: 0; padding-bottom: 0; }
 .class-info h1 { margin: 0; padding: 0; }
-.class-info #class-type-container { width: 100%; display: flex; justify-content: space-between; align-items: center; }
-.class-info #class-type-container .class-type-btn { border: none; background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); background: var(--gradient-left-dark); border-radius: 10px; margin: 20px; padding: 5px 15px; font-size: 1.2em; }
+.class-info #class-type-container { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: var(--spacer) 0; }
+.class-info #class-type-container .class-type-btn { border: none; background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); background: var(--gradient-left-dark); border-radius: 10px; margin: 20px; padding: 15px 25px; font-size: 1.2em; }
 .class-info #class-type-container .class-type-goto { background: none; position: relative; }
 .class-info #class-type-container .class-type-goto::after { position: absolute; content: ''; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--font-color); }
 .class-info .class-type-container { display: flex; width: 200%; margin-left: 100%; transition: margin-left 350ms linear; }
-.class-info .class-type-container .class-type-box { margin: 0 var(--spacing); background: var(--gradient-left-dark); border-radius: 20px; width: 100%; height: auto; }
-.class-info .class-type-container .class-type-box h3 { padding: 30px 10px 10px 10px; font-size: 1.5rem; }
-.class-info .class-type-container .class-type-box .class { border: none; background: #0a7569; color: #fff; border-radius: 20px; display: inline-block; padding: 10px 20px; margin: 20px; }
+.class-info .class-type-container .class-type-box { margin: 0 var(--spacing); background: var(--gradient-left-dark); border-radius: 20px; width: 100%; height: auto; padding: calc(var(--spacer) / 2); }
+.class-info .class-type-container .class-type-box h3 { padding: 30px 10px 10px 10px; font-size: 1.6rem; }
+.class-info .class-type-container .class-type-box .class { border: none; background: #0a7569; color: #fff; border-radius: 25px; display: inline-block; padding: 20px; margin: 20px; font-size: 15px; }
 .class-info .class-type-container .class-type-box #board-type { padding: 5px; }
 .class-info .class-type-container .class-type-box .benefits { text-align: left; padding: 15px; }
 .class-info .class-type-container .class-type-box .benefits button { border: none; background: transparent; font-size: 1em; font-weight: bold; }
 .class-info .class-type-container .class-type-box .benefits .benefit { margin: 10px 20px; display: none; }
-.class-info #demo-info { padding: 30px 10px; font-size: 1.3em; font-weight: bold; }
+.class-info #demo-info { padding: var(--spacer) 5px; font-size: 1.3em; font-weight: bold; }
 
-.fee-info, .teaching-info { padding: 0; display: block; width: 100%; margin-top: 20px; overflow: hidden; }
-.fee-info .circle-points, .teaching-info .circle-points { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; margin: 10px 20px; }
-.fee-info .circle-points .circle, .teaching-info .circle-points .circle { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); display: inline-block; width: 100px; height: 100px; border-radius: 50%; }
+.fee-info, .teaching-info { padding: 0; display: block; width: 100%; overflow: hidden; margin-top: var(--spacer); }
+.fee-info .circle-points, .teaching-info .circle-points { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; padding: 30px; margin: 10px; }
+.fee-info .circle-points .circle, .teaching-info .circle-points .circle { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); display: inline-block; width: 150px; height: 150px; border-radius: 50%; }
 .fee-info .circle-points p, .teaching-info .circle-points p { width: 150px; padding: 10px; }
 .fee-info #detailed-fee, .teaching-info #detailed-fee { font-weight: 300; margin-top: 20px; }
 .fee-info .detailed-fee-enquiry-btn, .teaching-info .detailed-fee-enquiry-btn { width: 90%; }

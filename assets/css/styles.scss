@@ -9,6 +9,14 @@
     --gradient-right-darker: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
     --gradient-left-dark:linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
     --gradient-left-lighter: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3));
+
+
+
+    --font-size-heading:30px;
+    --font-size-hero-h1:30px;
+    --font-size-hero-h2:25px;
+
+    --spacer:40px;
 }
 
 *{
@@ -64,12 +72,12 @@ header{
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:20px;
+    padding:var(--spacer);
     margin-top:60px;
     margin-bottom:60px;
     overflow:hidden;
     h1{
-        font-size:35px;
+        font-size:var(--font-size-heading);
         margin:20px 0;
     }
        
@@ -299,8 +307,6 @@ header{
            }
        }
        .nav-container-open{
-        //    width:100%;
-        //    height:100vh;
             margin:0;
            .nav-close-btn{
                transform:scale(1) rotate(360deg);
@@ -355,10 +361,10 @@ header{
         justify-content:center;
         h1{
             padding:5px 0;
-            font-size:35px;
+            font-size:var(--font-size-hero-h1);
         }
         h2{
-            font-size:30px;
+            font-size:var(--font-size-hero-h2);
             padding:30px 0 10px;
         }
         button{
@@ -389,9 +395,10 @@ header{
 // class information
 .class-info{
     --spacing:20px;
-    padding:var(--spacing);
+    padding:calc( 2 * var(--spacer)) var(--spacing);
     margin-top:0;
     margin-bottom:0;
+    padding-bottom:0;
     h1{
         margin:0;
         padding:0;
@@ -402,6 +409,7 @@ header{
         display:flex;
         justify-content:space-between;
         align-items:center;
+        padding:var(--spacer) 0;
       
         .class-type-btn{
             border:none;
@@ -409,7 +417,7 @@ header{
             background:var(--gradient-left-dark);
             border-radius:10px;
             margin:20px;
-            padding:5px 15px;
+            padding:15px 25px;
             font-size:1.2em;
         }
         .class-type-goto{
@@ -438,19 +446,22 @@ header{
             border-radius:20px;
             width:100%;
             height:auto;
+            padding:calc(var(--spacer) / 2);
+            
             h3{
                 padding:30px 10px 10px 10px;
-                font-size:1.5rem;
+                font-size:1.6rem;
             }
            
             .class{
                 border:none;
                 background: #0a7569;
                 color:#fff;
-                border-radius:20px;
+                border-radius:25px;
                 display:inline-block;
-                padding:10px 20px;
+                padding:20px;
                 margin:20px;
+                font-size:15px;
             }
             #board-type{
                 padding:5px;
@@ -474,7 +485,7 @@ header{
     }
 
     #demo-info{
-        padding:30px 10px;
+        padding:var(--spacer) 5px;
         font-size:1.3em;
         font-weight:bold;
     }
@@ -487,19 +498,20 @@ header{
     padding:0;
     display:block;
     width:100%;
-    margin-top:20px;
     overflow:hidden;
+    margin-top:var(--spacer);
     .circle-points{
         display:inline-flex;
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        margin: 10px 20px;
+        padding:30px;
+        margin:10px;
         .circle{
             background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
             display:inline-block;
-            width:100px;
-            height:100px;
+            width:150px;
+            height:150px;
             border-radius:50%;
         }
         p{
