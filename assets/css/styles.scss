@@ -505,13 +505,14 @@ header{
         flex-direction:column;
         justify-content:center;
         align-items:center;
+        // border:2px solid red;
         padding:30px;
-        margin:10px;
+        margin:10px 0;
         .circle{
             background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
             display:inline-block;
-            width:150px;
-            height:150px;
+            width:130px;
+            height:130px;
             border-radius:50%;
         }
         p{
