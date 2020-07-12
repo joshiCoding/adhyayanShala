@@ -36,10 +36,16 @@ body{
     a{
     color:var(--font-color);
     }
-
+    display:flex;
+    flex-direction:column;
+    align-items:center; 
+    justify-content:center;
 
 }
 // for header
+.header-desktop{
+    display:none;
+}
 header{
     display:flex;
     justify-content: space-between;
@@ -57,6 +63,7 @@ header{
 //content
 .hero{
     height:70vh;
+    width:100%;
     button{
         a{
             text-decoration:none;
@@ -71,6 +78,7 @@ header{
 .about-us,
 .articles,
 .footer{
+    width:100%;
     height: auto;
     display:flex;
     flex-direction:column;
@@ -114,17 +122,9 @@ header{
             left:105%;
         }
     }
-    button{
-        a{
-            text-decoration:none;
-        }
-    }
+    
    
 
-}
-.about-us{
-    background: #c1c1c1;
-    border-radius: 67px 0px;
 }
 
 // ---------components--------
@@ -208,6 +208,7 @@ header{
 //common button throughout design
 .to-contact-btn{
     width:100%;
+    max-width:450px;
     border:none;
     border-radius:20px;
     background: var(--gradient-left-dark);
@@ -216,10 +217,14 @@ header{
     font-size:25px;
     font-weight:bold;
     margin-top:10px;
+    a{
+        text-decoration:none;
+    }
 
 }
 // band design
 .band{
+    width:100%;
     background:var(--gradient-right-dark);
     padding:20px 0;
     text-align:center;
@@ -350,6 +355,9 @@ header{
         svg{
             height:30px;
             width:30px;
+        }
+        p{
+            display:none;
         }
     }
 
@@ -504,7 +512,7 @@ header{
             }
         }
     }
-
+ 
     #demo-info{
         padding:var(--spacer) 5px;
         font-size:1.3em;
@@ -569,8 +577,6 @@ header{
 
 // get in touch
 .get-in-touch{
-    // background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
-    //  background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
      background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
     text-align:left;
     align-items:flex-start;
@@ -613,9 +619,10 @@ header{
 }
 //about us
 .about-us{
-    //  background: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%);
-    // background: linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%);
-    background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%);
+    max-width:800px;
+    background:var(--gradient-left-dark);
+    border-radius: 67px 0px;
+
     p{
         padding:20px;
     }
@@ -624,9 +631,185 @@ header{
 //----------------Footer-----------
 //follow
 footer{
+    width:100%;
     //foot
     .foot{
         padding:20px;
         text-align:center;
+    }
+}
+
+
+// responsive tablet design
+
+@media only screen and (min-width : 700px){
+
+    .fixed-wapp{
+        display:none;
+    }
+    //layout
+    .class-info, 
+    .fee-info,
+    .teaching-info,
+    .get-in-touch,
+    .collection,
+    .about-us,
+    .articles{
+        h1{
+            font-size:40px;
+        }
+
+    }
+     //common components 
+   .to-contact-btn{
+        width:auto;
+    }
+
+    .band{
+        padding:40px;
+    }
+
+
+   header{
+       .call-now{
+           border:2px solid var(--font-color);
+           border-radius:40px;
+           margin-right:20px;
+           width:200px;
+           height:44px;
+           display:flex;
+           justify-content:flex-start;
+           align-items:center;
+           a{
+                width:40px;
+                height:40px;
+                align-self:flex-end;
+                border:2px solid var(--font-color);
+                border-radius:50%;
+                background:var(--font-color);
+                svg{
+                    fill:#DDD;
+                }
+               
+            }
+           p{
+               display:inline-block;
+               font-size:25px;
+               width:80%;
+           }
+           &:hover{
+                transform:none;
+                transition:none;
+            }
+            &:active{
+                transform:none;
+                transition:none;
+            }
+       }
+   }
+
+   .hero{
+        height:90vh;
+        .hero-content{
+            align-items:center;
+
+            h1{
+                font-size:50px;
+                color:#ddd;
+            }
+            h2{
+                font-size:35px;
+            }
+           button{
+               width:auto;
+               a{
+                display:inline-block;
+                letter-spacing:1px;
+                padding:0 15px;
+               }
+              
+           }
+        }
+ 
+   }
+   .class-info{
+       padding-top:20px;
+      
+       #demo-info{
+           font-size:35px;
+       }
+       .book-demo{
+           width:400px;
+       }
+   }
+
+  
+}
+
+//responsive design for desktop
+@media only screen and (min-width : 900px){
+    header{
+        display:none;
+    }
+ 
+    .header-desktop{
+        display:flex;
+        justify-content: flex-end;
+        align-items:center;
+        text-align:center;
+        width:100vw;
+        height:80px;
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:400;
+        background: var(--gradient-right);
+        li{
+            list-style:none;
+            text-align:left;
+            padding: 10px ;
+            font-size:20px;
+            font-weight:bold;
+            a{
+                text-decoration:none;
+             }
+        }
+        .logo{
+            font-weight:bolder;
+            font-size:35px;
+            position:absolute;
+            left:10px;
+        }
+        .call-now{
+            border:2px solid var(--font-color);
+            border-radius:40px;
+            height:44px;
+            width:200px;
+            margin-right:20px;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            background:none;
+            a{
+                width:40px;
+                height:40px;
+                align-self:flex-end;
+                border:2px solid var(--font-color);
+                border-radius:50%;
+                background:var(--font-color);
+                svg{
+                    fill:#DDD;
+                    height:30px;
+                    width:30px;
+                }
+                
+                }
+            p{
+                display:inline-block;
+                font-size:25px;
+                width:80%;
+            }
+        }
+    
     }
 }
