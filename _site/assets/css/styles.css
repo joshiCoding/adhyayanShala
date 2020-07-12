@@ -82,7 +82,7 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 .class-info #demo-info { padding: var(--spacer) 5px; font-size: 1.3em; font-weight: bold; }
 
 .fee-info, .teaching-info { padding: 0; display: block; width: 100%; overflow: hidden; margin-top: var(--spacer); }
-.fee-info .circle-points, .teaching-info .circle-points { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; padding: 30px; margin: 10px 0; }
+.fee-info .circle-points, .teaching-info .circle-points { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; margin: 10px 0; }
 .fee-info .circle-points .circle, .teaching-info .circle-points .circle { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); display: inline-block; width: 130px; height: 130px; border-radius: 50%; }
 .fee-info .circle-points p, .teaching-info .circle-points p { width: 150px; padding: 10px; }
 .fee-info #detailed-fee, .teaching-info #detailed-fee { font-weight: 300; margin-top: 20px; }
