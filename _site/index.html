@@ -15,6 +15,9 @@
 
     <!-- Google Fonts : Lato and Oswald fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">  
+
+    <!-- smooth scroll cdn -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 <body>
     
@@ -59,7 +62,11 @@
         <h1>is at your DoorStep</h1>
 
         <h2>Grab this Opportunity</h2>
-        <button class="enquire">Enquire Now</button>
+        <button class="enquire">   
+            <a href="#get-in-touch" class="enquire-anchor">
+                Enquire Now
+            </a>
+        </button>
     </div>
     <div class="hero-down"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div>
 </div>
@@ -131,7 +138,11 @@
 
    <p id="no-money">No money is asked untill you are fully convinced</p>
 
-   <button class="book-demo to-contact-btn">Book a Free Demo Now</button>
+   <button class="book-demo to-contact-btn">
+    <a href="#get-in-touch" class="book-demo-anchor">
+        Book a Free Demo Now
+    </a>   
+    </button>
  </div>
 
  <div class="fee-info">
@@ -155,7 +166,11 @@
     <p id="detailed-fee">For more detailed fee enquiry, give us a call. <br>
         Click the button to get the contact details
     </p>
-    <button class="detailed-fee-enquiry-btn to-contact-btn">Enquire Classwise Fee Structure</button>
+    <button class="detailed-fee-enquiry-btn to-contact-btn">
+        <a href="#get-in-touch" class="detailed-fee-enquiry-anchor">
+            Enquire Classwise Fee Structure
+        </a>
+    </button>
  </div>
 
  <div class="accepted-fee-type band">
@@ -211,7 +226,7 @@
 <!-- </div> -->
 
 <!-- Get in Touch -->
-<div class="get-in-touch">
+<div class="get-in-touch" id = "get-in-touch">
     <h1>Get in Touch</h1>
     <div class="get-in-touch-call">
     <h3 id="call-head">Call us at : </h3>

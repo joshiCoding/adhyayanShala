@@ -1,4 +1,4 @@
-// for menu button
+//------------for menu button
 const menu = document.querySelector('.nav-container');
 
 const menuOpenBtn = document.querySelector('.nav-open-btn');
@@ -15,80 +15,82 @@ menuCloseBtn.addEventListener('click', e=> {
 })
 
 
-//for scroll function on enquire button
-const enquireBtn = document.querySelector('.enquire');
-// const moveToClassInfo = document.querySelector('');
+//-----------for scroll function on enquire button------
 
-enquireBtn.addEventListener('click', e=>{
-    smoothScroll('.teaching-info',400);
-});
+// const enquireBtn = document.querySelector('.enquire');
+// enquireBtn.addEventListener('click', e=>{
+//     smoothScroll('.get-in-touch',400);
+// });
 
-//copied from stackoverflow
-// function smoothScroll(elementId){
-//     var MIN_PIXELS_PER_STEP = 16;
-//     var MAX_SCROLL_STEPS = 30;
-//     var target = document.getElementById(elementId);
-//     var scrollContainer = target;
-//     do {
-//         scrollContainer = scrollContainer.parentNode;
-//         if (!scrollContainer) return;
-//         scrollContainer.scrollTop += 1;
-//     } while (scrollContainer.scrollTop == 0);
+// const freeDemoBtn = document.querySelector('.book-demo');
+// freeDemoBtn.addEventListener('click', e=>{
+//     smoothScroll('.get-in-touch',400);
+// });
 
-//     var targetY = 0;
-//     do {
-//         if (target == scrollContainer) break;
-//         targetY += target.offsetTop;
-//     } while (target = target.offsetParent);
+// const feeDetailBtn = document.querySelector('.detailed-fee-enquiry-btn');
+// feeDetailBtn.addEventListener('click',e=>{
+//     smoothScroll('.get-in-touch',400);
+// });
 
-//     var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
-//                                  (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+// // smooth scroll function of devEd (perfecto!!!)
+// function smoothScroll(target, duration){
+//     console.log("inside smooth scroll")
+//     var target = document.querySelector(target);
+//     var targetPosition = target.getBoundingClientRect().top;
+//     var startPosition = window.pageYOffset;
+//     var distance = targetPosition - startPosition;
+//     var startTime = null;
 
-//     var stepFunc = function() {
-//         scrollContainer.scrollTop =
-//             Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+//     console.log("targetPosition : " + targetPosition);
+//     console.log("startPosition : " + startPosition);
+//     console.log("distance : " + distance);
+//     console.log("startTime : " + startTime);
 
-//         if (scrollContainer.scrollTop >= targetY) {
-//             return;
-//         }
+//     function animation(currentTime){
+//         if(startTime == null) startTime = currentTime;
+//         var timeElapsed = currentTime - startTime;
+//         var run = ease(timeElapsed, startPosition, distance, duration);
+//         window.scrollTo(0,run);
 
-//         window.requestAnimationFrame(stepFunc);
-//     };
+//         if(timeElapsed < duration) requestAnimationFrame(animation);
+//     }
 
-//     window.requestAnimationFrame(stepFunc);
+//     function ease(t,b,c,d){
+//         t /= d/2;
+//         if(t<1)return c/2*t*t*b;
+//         t--;
+//         return -c/2*(t*(t-2)-1)+b;
+//     }
+
+//     requestAnimationFrame(animation);
 // }
 
-// smooth scroll function of deved
-function smoothScroll(target, duration){
-    console.log("inside smooth scroll")
-    var target = document.querySelector(target);
-    var targetPosition = target.getBoundingClientRect().top - 80;
-    var startPosition = window.pageYOffset;
-    var distance = targetPosition - startPosition;
-    var startTime = null;
 
-    console.log(targetPosition);
-    function animation(currentTime){
-        if(startTime == null) startTime = currentTime;
-        var timeElapsed = currentTime - startTime;
-        var run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0,run);
+// const anchor = document.querySelector(".no-default");
+// const enquireBtn = document.querySelector('.enquire');
+// anchor.addEventListener('click', e=>{
+//     e.preventDefault();
+//     console.log("inside anchor");
+   
+// });
 
-        if(timeElapsed < duration) requestAnimationFrame(animation);
-    }
-
-    function ease(t,b,c,d){
-        t /= d/2;
-        if(t<1)return c/2*t*t*b;
-        t--;
-        return -c/2*(t*(t-2)-1)+b;
-    }
-
-    requestAnimationFrame(animation);
-}
+//smooth scroll function of the library smooth scroll
+var scroll1 = new SmoothScroll('.enquire-anchor', {
+    speed : 800,
+    updateURL:false
+});
+var scroll2 = new SmoothScroll('.book-demo-anchor', {
+    speed : 800,
+    updateURL:false
+});
+var scroll3 = new SmoothScroll('.detailed-fee-enquiry-anchor', {
+    speed : 800,
+    updateURL:false
+});
 
 
-//class type button
+
+//-----------class type button
 const classroomBtn = document.querySelector(".classroom-btn");
 const oneononeBtn = document.querySelector('.one-on-one-btn');
 
