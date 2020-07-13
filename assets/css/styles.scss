@@ -279,6 +279,13 @@ header{
             }
         }
     }
+    .active-section{
+        a{
+            &::before{
+                transform:scaleX(1);
+           }
+        }
+    }
 }
 
 
@@ -828,6 +835,7 @@ footer{
                     text-decoration:none;
                  }
             }
+            
         }
        
         .logo{

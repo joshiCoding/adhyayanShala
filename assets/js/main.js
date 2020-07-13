@@ -131,25 +131,32 @@ classroomBtn.addEventListener('click',e =>{
 
 
 //for showing page active tab
-// const classInfo = document.querySelector('.class-info');
-// const collection = document.querySelector('.collection');
-// const getInTouch = document.querySelector('.get-in-touch');
+const classInfo = document.querySelector('.class-info');
+const collection = document.querySelector('.collection');
+const getInTouch = document.querySelector('.get-in-touch');
 
-// const menuList = document.querySelector('.nav-list');
+const menuList = document.querySelector('.nav-list');
 
-// window.addEventListener('scroll', e=>{
-//     console.log(classInfo.getBoundingClientRect().top);
-//     console.log(window.pageYOffset);
-//     if(classInfo.getBoundingClientRect().top < window.pageYOffset){
-//         console.log("you have entered courses");
-//        }
-//        else if(classInfo.getBoundingClientRect().top + classInfo.clientHeight > window.pageYOffset){
-
-//        }
-// })
+window.addEventListener('scroll', e=>{
+   
+    if(collection.getBoundingClientRect().top - 100 < 0){
+        menuList.querySelector('.to-collection').classList.add('active-section');
+        menuList.querySelector('.to-get-in-touch').classList.remove('active-section');
+        menuList.querySelector('.to-courses').classList.remove('active-section');
 
 
+    }
+    else if(getInTouch.getBoundingClientRect().top - 100 < 0){
+        menuList.querySelector('.to-collection').classList.remove('active-section');
+        menuList.querySelector('.to-get-in-touch').classList.add('active-section');
+        menuList.querySelector('.to-courses').classList.remove('active-section');
+    }
+    else if(classInfo.getBoundingClientRect().top < 0){
+      
+        menuList.querySelector('.to-collection').classList.remove('active-section');
+        menuList.querySelector('.to-get-in-touch').classList.remove('active-section');
+        menuList.querySelector('.to-courses').classList.add('active-section');
+    }
+})
 
-// if(classInfo.getBoundingClientRect().top < window.pageYOffset){
-//  console.log("Yes");
-// }
+

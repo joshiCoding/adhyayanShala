@@ -46,6 +46,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 .nav-list li a { display: inline-block; padding: 10px; position: relative; }
 .nav-list li a::before { content: ''; position: absolute; bottom: 0; right: 0; height: 2px; width: 100%; background: var(--font-color); transition: transform 150ms linear; transform: scaleX(0); transform-origin: left; }
 .nav-list li a:hover::before, .nav-list li a:focus::before { transform: scaleX(1); }
+.nav-list .active-section a::before { transform: scaleX(1); }
 
 header svg { fill: var(--font-color); }
 header .main-nav-btn { border: 0; width: 80px; height: 80px; background: none; overflow: hidden; }
