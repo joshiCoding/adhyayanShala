@@ -128,3 +128,28 @@ classroomBtn.addEventListener('click',e =>{
     oneononeBtn.classList.add('class-type-goto');
     classroomBtn.classList.remove('class-type-goto');
 })
+
+
+//for showing page active tab
+// const classInfo = document.querySelector('.class-info');
+// const collection = document.querySelector('.collection');
+// const getInTouch = document.querySelector('.get-in-touch');
+
+// const menuList = document.querySelector('.nav-list');
+
+// window.addEventListener('scroll', e=>{
+//     console.log(classInfo.getBoundingClientRect().top);
+//     console.log(window.pageYOffset);
+//     if(classInfo.getBoundingClientRect().top < window.pageYOffset){
+//         console.log("you have entered courses");
+//        }
+//        else if(classInfo.getBoundingClientRect().top + classInfo.clientHeight > window.pageYOffset){
+
+//        }
+// })
+
+
+
+// if(classInfo.getBoundingClientRect().top < window.pageYOffset){
+//  console.log("Yes");
+// }
