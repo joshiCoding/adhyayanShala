@@ -159,4 +159,19 @@ window.addEventListener('scroll', e=>{
     }
 })
 
+// for sticking header to the top on movement
+
+// const header = document.querySelector('header');
+// const hero = document.querySelector('.hero');
+
+// window.addEventListener('scroll',e =>{
+//     if(hero.getBoundingClientRect().top < 0){
+//         header.style.position = "fixed";
+//         console.log("it happened")
+//     }
+//     else{
+//         header.style.position = '';
+//     }
+// })
+
 

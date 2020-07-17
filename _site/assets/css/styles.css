@@ -1,4 +1,4 @@
-:root { --font-color:#1f2636; --gradient-right: linear-gradient(90.95deg, #12D6B3 0.13%, rgba(18, 139, 207, 0.51) 99.89%); --gradient-right-dark:linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); --gradient-right-darker: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%); --gradient-left-dark:linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); --gradient-left-lighter: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3)); --font-size-heading:30px; --font-size-hero-h1:30px; --font-size-hero-h2:25px; --spacer:40px; }
+:root { --font-color:#1f2636; --gradient-right: linear-gradient(90.95deg, #12D6B3 0.13%, rgba(18, 139, 207, 0.51) 99.89%); --gradient-right-dark:linear-gradient(90deg, #25F5DC 2.38%, rgba(1, 129, 223, 0.97) 100%); --gradient-right-darker: linear-gradient(89.12deg, #2EBBA2 0.84%, #32B3AA 0.85%, #33B0AE 0.86%, #7390F4 99.07%); --gradient-left-dark:linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); --gradient-left-lighter: linear-gradient(90.16deg, #022A36 5.36%, rgba(6, 124, 190, 0.04) 96.15%), linear-gradient(0deg, rgba(133, 129, 129, 0.3), rgba(133, 129, 129, 0.3)); --color-prim: #259EE2; --color-sec:#25F5DC; --font-size-heading:30px; --font-size-hero-h1:30px; --font-size-hero-h2:25px; --spacer:40px; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -8,9 +8,9 @@ body a { color: var(--font-color); }
 .header-desktop { display: none; }
 
 header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 80px; position: fixed; top: 0; left: 0; z-index: 400; background: var(--gradient-right); }
+header .urgent-info { position: absolute; top: 100%; width: 100%; height: 40px; display: flex; align-items: center; justify-content: center; background: #ddd; display: none; }
 
 .hero { height: 70vh; width: 100%; }
-.hero button a { text-decoration: none; }
 
 .class-info, .fee-info, .teaching-info, .get-in-touch, .collection, .about-us, .articles, .footer { width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--spacer); margin-top: 60px; margin-bottom: 60px; overflow: hidden; }
 .class-info h1, .fee-info h1, .teaching-info h1, .get-in-touch h1, .collection h1, .about-us h1, .articles h1, .footer h1 { font-size: var(--font-size-heading); margin: 20px 0; }
@@ -19,6 +19,8 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 .class-info h1::before, .class-info h1::after, .fee-info h1::before, .fee-info h1::after, .teaching-info h1::before, .teaching-info h1::after { content: ''; background: #1f2a46; width: 100vw; height: 10px; position: absolute; top: 50%; transform: translateY(-50%); }
 .class-info h1::before, .fee-info h1::before, .teaching-info h1::before { right: 105%; }
 .class-info h1::after, .fee-info h1::after, .teaching-info h1::after { left: 105%; }
+
+.no-background { background: none !important; }
 
 .card { border: 2px solid red; border: 2px solid red; width: 250px; height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 
@@ -35,9 +37,10 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 
 .active-page { color: #BB2E47; }
 
-.to-contact-btn { width: 100%; max-width: 450px; border: none; border-radius: 20px; background: var(--gradient-left-dark); color: #fff; padding: 10px; font-size: 25px; font-weight: bold; margin-top: 10px; }
-.to-contact-btn a { text-decoration: none; display: inline-block; width: 100%; height: 100%; }
+.to-contact-btn { width: 100%; max-width: 450px; border: none; border-radius: 20px; background: var(--gradient-left-dark); background: var(--color-prim); padding: 10px; font-size: 25px; font-weight: bold; margin: 0 40px; margin-top: 10px; }
+.to-contact-btn a { text-decoration: none; display: inline-block; width: 100%; height: 100%; color: #ddd; }
 .to-contact-btn:hover, .to-contact-btn:focus { background: transparent; box-shadow: inset 0px 0px 0px 2px var(--font-color); }
+.to-contact-btn:hover a, .to-contact-btn:focus a { color: var(--font-color); }
 
 .band { width: 100%; background: var(--gradient-right-dark); padding: 20px 0; text-align: center; }
 .band .medias { display: flex; flex-direction: row; width: 100%; justify-content: space-between; padding: 20px; font-size: 2rem; }
@@ -73,8 +76,8 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 .hero .hero-content { background: var(--gradient-left-lighter); color: #ddd; padding: 20px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
 .hero .hero-content h1 { padding: 5px 0; font-size: var(--font-size-hero-h1); }
 .hero .hero-content h2 { font-size: var(--font-size-hero-h2); padding: 30px 0 10px; }
-.hero .hero-content button { border: none; border-radius: 10px; height: 50px; width: 200px; font-size: 1.5rem; font-weight: bolder; }
-.hero .hero-content button a { color: var(--font-color); }
+.hero .hero-content button { border: none; border-radius: 10px; display: block; display: inline-flex; width: auto; height: auto; padding: 0; margin: 0; align-self: flex-start; }
+.hero .hero-content button a { color: var(--font-color); margin: 0; font-size: 1.3rem; font-weight: bolder; padding: 10px; text-align: left; text-decoration: none; }
 .hero .hero-content button:hover, .hero .hero-content button:focus { background: transparent; box-shadow: inset 0px 0px 0px 2px #ddd; }
 .hero .hero-content button:hover a, .hero .hero-content button:focus a { color: #ddd; }
 .hero .hero-down { position: absolute; bottom: -25px; left: 50%; background: #ddd; width: 50px; height: 50px; border-radius: 50%; transform: translateX(-50%); display: flex; justify-content: center; padding-top: 5px; }
@@ -82,24 +85,25 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 .class-info { --spacing:20px; padding: calc( 2 * var(--spacer)) var(--spacing); margin-top: 0; margin-bottom: 0; padding-bottom: 0; }
 .class-info h1 { margin: 0; padding: 0; }
 .class-info #class-type-container { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: var(--spacer) 0; }
-.class-info #class-type-container .class-type-btn { border: none; background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); background: var(--gradient-left-dark); border-radius: 10px; margin: 20px; padding: 15px 25px; font-size: 1.2em; }
+.class-info #class-type-container .class-type-btn { border: none; background: var(--gradient-left-dark); background: var(--color-prim); color: #ddd; border-radius: 10px; margin: 20px; padding: 10px 25px; font-size: 1.2em; }
 .class-info #class-type-container .class-type-btn:hover { box-shadow: inset 0px 0px 0px 2px var(--font-color); }
-.class-info #class-type-container .class-type-goto { background: none; position: relative; }
+.class-info #class-type-container .class-type-goto { background: none; position: relative; color: var(--font-color); }
 .class-info #class-type-container .class-type-goto::after { position: absolute; content: ''; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--font-color); }
 .class-info #class-type-container .class-type-goto:hover::after { height: 0; }
 .class-info .class-type-container { display: flex; width: 200%; margin-left: 100%; transition: margin-left 350ms linear; }
-.class-info .class-type-container .class-type-box { margin: 0 var(--spacing); background: var(--gradient-left-dark); border-radius: 20px; width: 100%; height: auto; padding: calc(var(--spacer) / 2); }
+.class-info .class-type-container .class-type-box { margin: 0 var(--spacing); background: var(--gradient-left-dark); background: var(--color-sec); border-radius: 20px; width: 100%; height: auto; padding: calc(var(--spacer) / 2); }
 .class-info .class-type-container .class-type-box h3 { padding: 30px 10px 10px 10px; font-size: 1.6rem; }
-.class-info .class-type-container .class-type-box .class { border: none; background: #0a7569; color: #fff; border-radius: 25px; display: inline-block; padding: 20px; margin: 20px; font-size: 15px; }
+.class-info .class-type-container .class-type-box .class { border: none; background: #0a7569; color: #fff; border-radius: 25px; display: inline-block; padding: 15px; margin: 20px; font-size: 15px; }
 .class-info .class-type-container .class-type-box #board-type { padding: 5px; }
 .class-info .class-type-container .class-type-box .benefits { text-align: left; padding: 15px; }
 .class-info .class-type-container .class-type-box .benefits button { border: none; background: transparent; font-size: 1em; font-weight: bold; }
 .class-info .class-type-container .class-type-box .benefits .benefit { margin: 10px 20px; display: none; }
+.class-info .class-type-container .one-on-one .class { margin: 10px; }
 .class-info #demo-info { padding: var(--spacer) 5px; font-size: 1.3em; font-weight: bold; }
 
 .fee-info, .teaching-info { padding: 0; display: block; width: 100%; overflow: hidden; margin-top: var(--spacer); }
 .fee-info .circle-points, .teaching-info .circle-points { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; margin: 10px 0; }
-.fee-info .circle-points .circle, .teaching-info .circle-points .circle { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); display: inline-block; width: 130px; height: 130px; border-radius: 50%; }
+.fee-info .circle-points .circle, .teaching-info .circle-points .circle { background: linear-gradient(270deg, #25F5DC 0%, rgba(1, 129, 223, 0.64) 100%); background: rgba(0, 163, 255, 0.58); display: inline-block; width: 130px; height: 130px; border-radius: 50%; }
 .fee-info .circle-points p, .teaching-info .circle-points p { width: 150px; padding: 10px; }
 .fee-info #detailed-fee, .teaching-info #detailed-fee { font-weight: 300; margin-top: 20px; }
 .fee-info .detailed-fee-enquiry-btn, .teaching-info .detailed-fee-enquiry-btn { width: 90%; }
@@ -139,8 +143,8 @@ footer .foot { padding: 20px; text-align: center; }
   .hero .hero-content { align-items: center; }
   .hero .hero-content h1 { font-size: 50px; color: #ddd; }
   .hero .hero-content h2 { font-size: 35px; }
-  .hero .hero-content button { width: auto; }
-  .hero .hero-content button a { display: inline-block; letter-spacing: 1px; padding: 0 15px; }
+  .hero .hero-content button { width: auto; align-self: center; }
+  .hero .hero-content button a { display: inline-block; letter-spacing: 1px; padding: 10px 15px; }
   .class-info { padding-top: 20px; }
   .class-info #demo-info { font-size: 35px; }
   .class-info .book-demo { width: 400px; } }
