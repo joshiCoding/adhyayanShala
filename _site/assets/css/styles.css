@@ -8,9 +8,8 @@ body a { color: var(--font-color); }
 .header-desktop { display: none; }
 
 header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 80px; position: fixed; top: 0; left: 0; z-index: 400; background: var(--gradient-right); }
-header .urgent-info { position: absolute; top: 100%; width: 100%; height: 40px; display: flex; align-items: center; justify-content: center; background: #ddd; display: none; }
 
-.hero { height: 70vh; width: 100%; }
+.hero { height: calc(70vh + 70px); width: 100%; }
 
 .class-info, .fee-info, .teaching-info, .get-in-touch, .collection, .about-us, .articles, .footer { width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--spacer); margin-top: 60px; margin-bottom: 60px; overflow: hidden; }
 .class-info h1, .fee-info h1, .teaching-info h1, .get-in-touch h1, .collection h1, .about-us h1, .articles h1, .footer h1 { font-size: var(--font-size-heading); margin: 20px 0; }
@@ -19,6 +18,11 @@ header .urgent-info { position: absolute; top: 100%; width: 100%; height: 40px; 
 .class-info h1::before, .class-info h1::after, .fee-info h1::before, .fee-info h1::after, .teaching-info h1::before, .teaching-info h1::after { content: ''; background: #1f2a46; width: 100vw; height: 10px; position: absolute; top: 50%; transform: translateY(-50%); }
 .class-info h1::before, .fee-info h1::before, .teaching-info h1::before { right: 105%; }
 .class-info h1::after, .fee-info h1::after, .teaching-info h1::after { left: 105%; }
+
+.urgent-info { position: absolute; top: 100%; width: 100%; height: auto; display: flex; align-items: center; justify-content: space-between; text-align: left; background: #ddd; padding: 5px; transition: height 150ms linear; }
+.urgent-info button { border: 1px solid var(--font-color); color: var(--font-color); background: transparent; padding: 5px; margin: 3px; }
+
+.urgent-info-close { height: 0; padding: 0; overflow: hidden; }
 
 .no-background { background: none !important; }
 
@@ -96,8 +100,10 @@ header .call-now:hover { transform: rotate(360deg); transition: transform 350ms 
 .class-info .class-type-container .class-type-box .class { border: none; background: #0a7569; color: #fff; border-radius: 25px; display: inline-block; padding: 15px; margin: 20px; font-size: 15px; }
 .class-info .class-type-container .class-type-box #board-type { padding: 5px; }
 .class-info .class-type-container .class-type-box .benefits { text-align: left; padding: 15px; }
-.class-info .class-type-container .class-type-box .benefits button { border: none; background: transparent; font-size: 1em; font-weight: bold; }
-.class-info .class-type-container .class-type-box .benefits .benefit { margin: 10px 20px; display: none; }
+.class-info .class-type-container .class-type-box .benefits .benefit-head { display: flex; justify-content: left; align-items: center; width: 100%; }
+.class-info .class-type-container .class-type-box .benefits .benefit-head svg { margin: 2px 0; }
+.class-info .class-type-container .class-type-box .benefits .benefit { margin: 10px 20px; width: 0; height: 0; overflow: hidden; transition: height 150ms linear; }
+.class-info .class-type-container .class-type-box .benefits-open .benefit { height: 50px; width: auto; }
 .class-info .class-type-container .one-on-one .class { margin: 10px; }
 .class-info #demo-info { padding: var(--spacer) 5px; font-size: 1.3em; font-weight: bold; }
 

@@ -48,6 +48,7 @@ body{
 // for header
 .header-desktop{
     display:none;
+
 }
 header{
     display:flex;
@@ -61,23 +62,11 @@ header{
     left:0;
     z-index:400;
     background: var(--gradient-right);
-
-    .urgent-info{
-        position:absolute;
-        top:100%;
-        width:100%;
-        height:40px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        background:#ddd;
-        display:none;
-    }
 }
 
 //content
 .hero{
-    height:70vh;
+    height:calc(70vh + 70px);
     width:100%;
 }
 .class-info,
@@ -138,6 +127,37 @@ header{
 }
 
 // ---------components--------
+
+.urgent-info{
+    position:absolute;
+    top:100%;
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-align:left;
+    background:#ddd;
+    padding:5px;
+    // display:none;
+    transition:height 150ms linear;
+
+    button{
+        border:1px solid var(--font-color);
+        color:var(--font-color);
+        background:transparent;
+        padding:5px;
+        margin:3px;
+    }
+}
+.urgent-info-close{
+    height:0;
+    padding:0;
+    overflow:hidden;
+}
+
+
+
 .no-background{
     background:none !important;
 }
@@ -598,17 +618,33 @@ header{
             .benefits{
                 text-align:left;
                 padding:15px;
-                button{
-                    border:none;
-                    background:transparent;
-                    font-size:1em;
-                    font-weight:bold;
+              
+                .benefit-head{
+                    display:flex;
+                    justify-content:left;
+                    align-items:center;
+                    width:100%;
+                    svg{
+                        margin:2px 0;
+                    }
                 }
+               
                 .benefit{
+
                     margin: 10px 20px;
-                    display:none;
+                    width:0;
+                    height:0;
+                    overflow:hidden;
+                    transition:height 150ms linear;
+                   
                 }
                 
+            }
+            .benefits-open{
+                .benefit{
+                    height:50px;
+                    width:auto;
+                }
             }
         }
         .one-on-one{

@@ -121,12 +121,20 @@ oneononeBtn.addEventListener('click', e=>{
 
     oneononeBtn.classList.remove('class-type-goto');
     classroomBtn.classList.add('class-type-goto');
+
+    document.querySelectorAll('.benefits').forEach(item => {
+            item.classList.remove('benefits-open');
+    })
 });
 classroomBtn.addEventListener('click',e =>{
     classTypeContainer.style.marginLeft = '100%';
 
     oneononeBtn.classList.add('class-type-goto');
     classroomBtn.classList.remove('class-type-goto');
+
+    document.querySelectorAll('.benefits').forEach(item => {
+            item.classList.remove('benefits-open');
+    })
 })
 
 
@@ -173,5 +181,21 @@ window.addEventListener('scroll', e=>{
 //         header.style.position = '';
 //     }
 // })
+
+
+//urgent btn code
+document.querySelectorAll('.urgent-info').forEach(item => {
+   item.querySelector('button').addEventListener('click', e =>{
+       item.classList.add('urgent-info-close');
+   })
+  });
+
+//for benfit button
+document.querySelectorAll('.benefits').forEach(item => {
+    item.addEventListener('click', e=>{
+        item.classList.toggle('benefits-open');
+    })
+})
+
 
 
