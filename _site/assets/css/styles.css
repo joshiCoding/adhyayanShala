@@ -7,7 +7,7 @@ body a { color: var(--font-color); }
 
 .header-desktop { display: none; }
 
-header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 80px; position: fixed; top: 0; left: 0; z-index: 400; background: var(--gradient-right); }
+header { display: flex; justify-content: space-between; align-items: center; text-align: center; width: 100vw; height: 80px; position: fixed; top: 0; left: 0; z-index: 400; background: var(--gradient-right); background: #12D6B3; }
 
 .hero { height: calc(70vh + 70px); width: 100%; }
 
@@ -41,7 +41,7 @@ header { display: flex; justify-content: space-between; align-items: center; tex
 
 .active-page { color: #BB2E47; }
 
-.to-contact-btn { width: 100%; max-width: 450px; border: none; border-radius: 20px; background: var(--gradient-left-dark); background: var(--color-prim); padding: 10px; font-size: 25px; font-weight: bold; margin: 0 40px; margin-top: 10px; }
+.to-contact-btn { max-width: 350px; border: none; border-radius: 20px; background: var(--gradient-left-dark); background: var(--color-prim); padding: 10px 20px; font-size: 20px; font-weight: bold; margin: 0 40px; margin-top: 10px; }
 .to-contact-btn a { text-decoration: none; display: inline-block; width: 100%; height: 100%; color: #ddd; }
 .to-contact-btn:hover, .to-contact-btn:focus { background: transparent; box-shadow: inset 0px 0px 0px 2px var(--font-color); }
 .to-contact-btn:hover a, .to-contact-btn:focus a { color: var(--font-color); }
@@ -155,7 +155,7 @@ footer .foot { padding: 20px; text-align: center; }
   .class-info #demo-info { font-size: 35px; }
   .class-info .book-demo { width: 400px; } }
 @media only screen and (min-width: 900px) { header { display: none; }
-  .header-desktop { display: flex; justify-content: flex-end; align-items: center; text-align: center; width: 100vw; height: 80px; position: fixed; top: 0; left: 0; z-index: 400; background: var(--gradient-right); }
+  .header-desktop { display: flex; justify-content: flex-end; align-items: center; text-align: center; width: 100vw; height: 80px; position: fixed; top: 0; left: 0; z-index: 400; background: var(--gradient-right); background: #12D6B3; }
   .header-desktop .nav-list { display: flex; }
   .header-desktop .nav-list li { list-style: none; text-align: left; font-size: 20px; font-weight: bold; }
   .header-desktop .nav-list li a { text-decoration: none; }
